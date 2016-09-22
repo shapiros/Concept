@@ -1,0 +1,136 @@
+@media only screen and (max-width: 450px) {
+   nav{
+   height: 70px;
+   width: 100%;
+   background: #fff;
+   display: flex;
+   align-items: center;
+   }
+
+.nav-wrapper{
+   padding: 0px 20px;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+img.navbar-logo{
+   height:30px;
+   width: auto;
+   float: left;
+}
+.connect-with-us{
+   display: flex;
+   align-items: center;
+}
+.connect-with-us-text{
+   display: none;
+}
+ul.social-links{
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+   padding: 0;
+   padding-left: 15px;
+}
+ul.social-links li{
+   width: 40px;
+}
+ul li a.social-icon{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+   border: solid 2px;
+   text-decoration: none;
+   font-size: 10px;
+}
+
+
+
+
+
+
+
+   .container{
+      padding: 50px 40px;
+   }
+
+   section.about-school{
+      padding-bottom: 50px;
+   }
+   .about-school-container{
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      width: 100%;
+   }
+   .about-school-container div.text{
+      display: block;
+      width: 100%;
+      text-align: center;
+   }
+   .about-school-container div.text p{
+      line-height: 1.8;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: center;
+      padding-bottom: 30px;
+   }
+
+   h2.section-title span.divider{
+      display: none;
+   }
+
+   .about-school-container div.video{
+      width: 100%;
+   }
+
+   .about-school-container div.video video{
+      width: 100%;
+      height: auto;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+   }
+
+   h2.section-title{
+      text-transform: uppercase;
+      color: #094a7e;
+      font-weight: 800;
+      font-size: 20px;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      padding-bottom: 10px;
+   }
+
+   h2.section-title span.text{
+      font-weight: normal;
+      color: #000;
+   }
+   a.btn{
+      border-radius: 5px;
+      background-color: rgb(254, 182, 38);
+      text-transform: uppercase;
+      font-weight: bold;
+      color:#000;
+      font-size: 20px;
+      text-decoration: none;
+   }
+
+   a.btn-large{
+     border-radius: 5px;
+     background-color: rgb(254, 182, 38);
+     padding: 15px 40px;
+     white-space: nowrap;
+     justify-content: center;
+     align-items: center;
+     text-transform: uppercase;
+     font-weight: bold;
+     color:#000;
+     font-size: 15px;
+     text-decoration: none;
+   }
+}

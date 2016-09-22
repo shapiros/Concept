@@ -9,22 +9,139 @@ body{
    background: url(../assets/cover.jpeg);
    background-size: cover;
 }
+nav{
+   height: 70px;
+   width: 100%;
+   background: #fff;
+   display: flex;
+   align-items: center;
+   box-shadow: 0px 10px 28.5px 1.5px rgba(0, 0, 0, 0.2);
+}
 a{
    transition: all 0.25s;
 }
 
 a.btn:hover,a.btn-large:hover{
-   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+   box-shadow: 0px 10px 28.5px 1.5px rgba(0, 0, 0, 0.2);
 }
-
 @media only screen and (min-width: 451px) {
-   nav{
-      height: 70px;
-      width: 100%;
-      background: #fff;
+   section.quicklinks{
+      background-image: url(../assets/quick-link.png);
+      display: none;
+   }
+   section.quicklinks div.contents{
+      background: rgba(0,4,24,0.8);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+   }
+   .qlink{
+      width: 154px;
+      height: 154px;
+      margin: 0px;
+   }
+   a.quick-link{
+      background-color: transparent;
+      min-height:150px;
+      min-width:150px;
+      max-width:150px;
+      border-radius: 20%;
+      border: 2px solid #fff;
       display: flex;
       align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-decoration: none;
+      font-size: 40px;
    }
+   a.quick-link:hover {
+      background-color: rgba(255,255,255,1);
+      background-blend-mode: color-dodge;
+      color: #000;
+
+   }
+   a.quick-link i.fa{
+      margin: 0px;
+   }
+   a.quick-link span.qlink-title{
+      position: relative;
+      margin-bottom: -50px;
+   }
+   section.fe-ln{
+      padding: 0px 150px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+   }
+
+   .featured-events{
+      width: 45%;
+      border: none;
+      border-right:2px solid rgba(0,0,0,0.1);
+      padding: 30px 50px 50px 0px;
+   }
+   .latest-news{
+      width: 45%;
+      padding: 30px 0px 50px 50px;
+   }
+
+   .f-event,.l-news{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-top: 25px;
+   }
+   .f-event .date,.l-news .date{
+      height: 70px;
+      min-width: 70px;
+      max-width: 70px;
+      border: 2px solid #094a7e;
+      color: #094a7e;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      float: left;
+   }
+   p.month{
+      margin:0px;
+      font-size: 18px;
+      text-transform: uppercase;
+      line-height: 1;
+   }
+   p._date{
+      margin: 0px;
+      font-size: 35px;
+      text-transform: uppercase;
+      line-height: 1;
+   }
+   .f-event .body,.l-news .body{padding-left: 20px;}
+   .f-event .body h3.event-title,.l-news .body h3.event-title{
+      margin: 0;
+      font-size: 20px;
+      font-weight: 500;
+   }
+   .f-event .body p.time-venue,.l-news .body p.time-venue{
+      margin: 0;
+      margin-top: 5px;
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(0,0,0,0.5);
+   }
+
+   .l-news .thumbnail{
+      height: 100px;
+      min-width: 150px;
+      background: #eceff1;
+      background: url(../assets/news-image.png);
+      background-size: cover;
+      background-position: right;
+   }
+
    .nav-wrapper{
       padding: 0px 150px;
       width: 100%;
@@ -44,6 +161,9 @@ a.btn:hover,a.btn-large:hover{
    .connect-with-us{
       display: flex;
       align-items: center;
+      font-weight: 500;
+      color: #094a7e;
+      font-style: italic;
    }
    ul.social-links{
       list-style: none;
@@ -65,12 +185,20 @@ a.btn:hover,a.btn-large:hover{
       border: solid 2px;
       text-decoration: none;
    }
+   ul li a.social-icon:hover{
+      border: solid 2px #094a7e;
+      background: #094a7e;
+      color: #fff;
+   }
+   ul li a.social-icon:hover i{
+      color:#fff;
+   }
 
 .container{
    padding: 20px 150px;
 }
 section.about-school{
-   border-bottom: 1px solid rgba(0,0,0,0.2);
+   border-bottom: 2px solid rgba(0,0,0,0.1);
    padding-bottom: 50px;
 }
 .about-school-container{
@@ -86,7 +214,6 @@ section.about-school{
    padding-right: 10px;
 }
 .about-school-container div.text p{
-
    font-size: 16px;
    font-family: "Open Sans";
    line-height: 2.00;
@@ -98,11 +225,10 @@ section.about-school{
 .about-school-container div.video{
    width: 40%;
 }
-
 .about-school-container div.video video{
    width: 100%;
    height: auto;
-   box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+   box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.2);
 }
 h2.section-title{
    text-transform: uppercase;
@@ -112,6 +238,13 @@ h2.section-title{
    width: 100%;
    border-bottom: 1px solid rgba(0,0,0,0.1);
    padding-bottom: 10px;
+}
+h2.section-title i{
+   margin-right: 20px;
+}
+h2.section-title.lvl-2{
+   font-size: 30px;
+   text-transform: none;
 }
 h2.section-title span.divider{
    border-bottom: 2px solid #094a7e;
@@ -128,9 +261,62 @@ h2.section-title span.divider{
    position: relative;
    bottom: 0px;
 }
+section.cover{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.progress{
+   top:0;
+   width: 50%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   background: url(../assets/progress_back.png);
+   background-repeat: no-repeat;
+   background-size: contain;
+   position: absolute;
+   justify-content: center;
+   align-items: center;
+}
+.progress .circular-progress{
+   height: 150px;
+   min-width: 150px;
+   border-radius: 50%;
+   margin-bottom: 20px;
+   border: 5px solid rgb(254, 182, 38);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.progress .circular-progress p{
+   color: #fff;
+   font-size: 40px;
+   font-weight: bold;
+}
+.progress a.btn-large{
+   padding: 12px 40px;
+   font-size: 15px;
+}
+.progress .progress-msg{
+   text-transform: uppercase;
+   color: #fff;
+   font-weight: bold;
+   font-size: 15px;
+}
+.subscribe{
+   height: 100px;
+   display: flex;
+   background: #3b4b64;
+   padding: 0px 150px;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   bottom: 0px;
+}
 
 a.btn{
-   border-radius: 5px;
+   border-radius: 3px;
    background-color: rgb(254, 182, 38);
    text-transform: uppercase;
    font-weight: bold;
@@ -140,10 +326,9 @@ a.btn{
 }
 
 a.btn-large{
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: rgb(254, 182, 38);
-  padding: 15px 100px;
-  white-space: nowrap;
+  padding: 12px 60px;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
@@ -152,137 +337,4 @@ a.btn-large{
   font-size: 20px;
   text-decoration: none;
 }
-}
-@media only screen and (max-width: 450px) {
-   nav{
-   height: 70px;
-   width: 100%;
-   background: #fff;
-   display: flex;
-   align-items: center;
-   }
-.nav-wrapper{
-   padding: 0px 30px;
-   width: 100%;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-}
-img.navbar-logo{
-   height:30px;
-   width: auto;
-   float: left;
-   position: absolute;
-   z-index: 100;
-   top:15px;
-}
-.connect-with-us{
-   display: flex;
-   align-items: center;
-}
-ul.social-links{
-   list-style: none;
-   display: flex;
-   flex-direction: row;
-   padding: 0;
-   padding-left: 15px;
-}
-ul.social-links li{
-   width: 40px;
-}
-ul li a.social-icon{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 25px;
-   height: 25px;
-   border-radius: 50%;
-   border: solid 2px;
-   text-decoration: none;
-}
-
-
-
-
-
-
-
-   .container{
-      padding: 50px 40px;
-   }
-
-   section.about-school{
-      padding-bottom: 50px;
-   }
-   .about-school-container{
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-      width: 100%;
-   }
-   .about-school-container div.text{
-      display: block;
-      width: 100%;
-      text-align: center;
-   }
-   .about-school-container div.text p{
-      line-height: 1.8;
-      font-size: 15px;
-      font-weight: 500;
-      text-align: center;
-      padding-bottom: 30px;
-   }
-   h2.section-title span.divider{
-      display: none;
-   }
-
-   .about-school-container div.video{
-      width: 100%;
-   }
-
-   .about-school-container div.video video{
-      width: 100%;
-      height: auto;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-   }
-
-   h2.section-title{
-      text-transform: uppercase;
-      color: #094a7e;
-      font-weight: 800;
-      font-size: 20px;
-      width: 100%;
-      text-align: center;
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-      padding-bottom: 10px;
-   }
-
-   h2.section-title span.text{
-      font-weight: normal;
-      color: #000;
-   }
-   a.btn{
-      border-radius: 5px;
-      background-color: rgb(254, 182, 38);
-      text-transform: uppercase;
-      font-weight: bold;
-      color:#000;
-      font-size: 20px;
-      text-decoration: none;
-   }
-
-   a.btn-large{
-     border-radius: 5px;
-     background-color: rgb(254, 182, 38);
-     padding: 15px 40px;
-     white-space: nowrap;
-     justify-content: center;
-     align-items: center;
-     text-transform: uppercase;
-     font-weight: bold;
-     color:#000;
-     font-size: 15px;
-     text-decoration: none;
-   }
 }
