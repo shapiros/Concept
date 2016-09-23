@@ -26,21 +26,50 @@ a.btn:hover,a.btn-large:hover{
 }
 @media only screen and (min-width: 451px) {
    section.quicklinks{
-      background-image: url(../assets/quick-link.png);
-      display: none;
+      background: url(../assets/quick-link.png);
+      background-size: cover;
+      background-position: center;
+
    }
    section.quicklinks div.contents{
       background: rgba(0,4,24,0.8);
+      min-height: 450px;
       background-size: cover;
       background-position: center;
       display: flex;
       align-items: flex-start;
       justify-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 20px 150px;
+   }
+   .quicklinks .contents div.links{
+      padding-top: 50px;
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
    }
    .qlink{
       width: 154px;
       height: 154px;
       margin: 0px;
+      color: transparent;
+      text-align: center;
+   }
+   a.qlink-nav{
+      position: absolute;
+      font-size: 40px;
+      color: #fff;
+   }
+   a.qlink-nav.right{
+      right: 50px;
+      margin-top: 230px;
+   }
+   a.qlink-nav.left{
+      left: 50px;
+      margin-top: 230px;
    }
    a.quick-link{
       background-color: transparent;
@@ -50,15 +79,28 @@ a.btn:hover,a.btn-large:hover{
       border-radius: 20%;
       border: 2px solid #fff;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       color: #fff;
       text-decoration: none;
       font-size: 40px;
+      margin-bottom: 20px;
+   }
+   a.quick-link span{
+      position: absolute;
+      padding-top: 250px;
+      font-size: 20px;
+      opacity: 0.5;
+      color: #fff;
+   }
+   a.quick-link:hover span{
+      opacity: 1;
+      font-weight: 500;
    }
    a.quick-link:hover {
-      background-color: rgba(255,255,255,1);
-      background-blend-mode: color-dodge;
+      background-color: rgba(255,255,255,0.9);
+      border-color: rgba(255,255,255,0.9);
       color: #000;
 
    }
