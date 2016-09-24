@@ -64,7 +64,7 @@
             if(/iPad|iPhone|iPod/g.test(navigator.userAgent) && !window.MSStream) {
                 document.documentElement.className += "isIOS";
             }
-
+            console.log("Hello");
             window.SchoolBlocksApp = SchoolBlocksApp;
         }(window, document));
 
@@ -89,8 +89,6 @@
                     });
 
         });
-
-
     </script>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Styles    -->
@@ -104,146 +102,5 @@
     <![endif]-->
   </head>
 <body>
-   <section class="cover">
-      <nav class="navbar navbar-default">
-         <div class="nav-wrapper">
-            <a class="navbar-logo" href="#"><img class="navbar-logo" alt="Brand" src="assets/Logo_blue.png"></a>
-            <div class="connect-with-us">
-               <p  class="connect-with-us-text" tyle="color:#0d5186;font-weight:bold;font-style:italic">Connect with us:</p>
-               <ul class="social-links">
-                  <li><a id="twitter" class="social-icon" style="color:#43bfff" href="#"><i class="fa fa-twitter "></i></a></li>
-                  <li><a id="facebook" class="social-icon" style="color:#094d80" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a id="linkedin" class="social-icon" style="color:#1f86d5" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a id="instagram" class="social-icon" style="color:#4176b3" href="#"><i class="fa fa-instagram"></i></a></li>
-               </ul>
-            </div>
-         </div>
-      </nav>
-      <div class="cover-content">
-         <div class="progress">
-            <div class="circular-progress">
-               <p>95%</p>
-            </div>
-            <p class="progress-msg">Website Completeness</p>
-            <a class="btn-large" href="#">Help Us Complete This Website</a>
-         </div>
-         <div class="text">
-         </div>
-      </div>
-      <div class="subscribe">
-         <p>Recieve Email, Text & Alerts</p>
-         <a class="btn-large" href="#"></span>subscribe</a>
-      </div>
-   </section>
-   <section class="about-school">
-      <div class="container">
-         <h2 class="section-title"><span class="text">About </span>Your School</h2>
-         <div class="about-school-container">
-         <div class="text">
-            <p id="about-school-text"></p>
-            <a class="btn-large">Learn More</a>
-         </div>
-         <div class="video">
-            <video poster="assets\about-school-video-cover.png" id="styled_video">
-
-            </video>
-         </div>
-         </div>
-      </div>
-   </section>
-   <section class="fe-ln">
-      <section class="featured-events">
-         <div class="section-header">
-            <h2 class="section-title lvl-2"><i class="fa fa-calendar-o"></i><span class="text">Featured </span>Events</h2>
-         </div>
-         <div id="event-1" class="f-event">
-            <div class="date">
-               <p class="month">NOV</p><p class="_date">16</p>
-            </div>
-            <div class="body">
-            <h3 class="event-title event">Student Advisor Day</h3>
-            <p class="time-venue">11:00 - 17:00 Conference Room</p>
-            <p class="desctiprion">Students will meet with their advisors to talk about goals for the year and college applications.</p>
-            </div>
-         </div>
-         <div id="event-3" class="f-event">
-            <div class="date">
-               <p class="month">NOV</p><p class="_date">10</p>
-            </div>
-            <div class="body">
-            <h3 class="event-title event">Beginning of the Year</h3>
-            <p class="time-venue">11:00 - 17:00 Conference Room</p>
-            <p class="desctiprion">Come join us at the <em>Beginning of the Year Party!</em></p>
-            </div>
-         </div>
-         <div id="event-2" class="f-event">
-            <div class="date">
-               <p class="month">NOV</p><p class="_date">16</p>
-            </div>
-            <div class="body">
-            <h3 class="event-title event">Student Advisor Day</h3>
-            <p class="time-venue">11:00 - 17:00 Conference Room</p>
-            <p class="desctiprion">Students will meet with their advisors to talk about goals for the year and college applications.</p>
-            </div>
-         </div>
-
-      </section>
-
-      <section class="latest-news">
-         <div class="section-header">
-            <h2 class="section-title lvl-2"><i class="fa fa-newspaper-o"></i><span class="text">Latest </span>News</h2>
-         </div>
-         <div id="news-1" class="l-news">
-            <div class="thumbnail"></div>
-            <div class="body">
-            <h3 class="event-title">Facility Buildout</h3>
-            <p class="time-venue">May 20, 2015</p>
-            <p class="desctiprion">New Athletics facitily to be built in 2017 will include indoor pool and hockey rink.</p>
-            </div>
-         </div>
-         <div id="news-2" class="l-news">
-            <div class="thumbnail"></div>
-            <div class="body">
-            <h3 class="event-title">SAT Preperation</h3>
-            <p class="time-venue">May 20, 2015</p>
-            <p class="desctiprion">SAT prep courses bring students score up by 20%.</em></p>
-            </div>
-         </div>
-         <div id="news-3" class="l-news">
-            <div class="thumbnail"></div>
-            <div class="body">
-            <h3 class="event-title">College Acceptance</h3>
-            <p class="time-venue">May 30, 2015</p>
-            <p class="desctiprion">Student acceptance to college reached highest percent ever.</p>
-            </div>
-         </div>
-      </section>
-   </section>
-   <section class="quicklinks">
-      <a class="qlink-nav left"><i class="fa fa-chevron-left"></i></a>
-      <a class="qlink-nav right"><i class="fa fa-chevron-right"></i></a>
-      <div class="contents">
-         <h2 class="section-title" style="border:none;text-align:center"><i class="fa fa-link"></i><span style="color:#fff">Quick</span><span style="color:#2979b9">Links</span></h2>
-         <div class="links">
-
-            <div id="link-1" class="qlink">
-               <a class="quick-link"><i class="fa fa-cutlery"></i><span>Lunch Menus</span></a>
-            </div>
-            <div id="link-2" class="qlink">
-               <a class="quick-link"><i class="fa fa-sun-o"></i><span>Summer Programs</span></a>
-            </div>
-            <div id="link-3" class="qlink">
-               <a class="quick-link"><i class="fa fa-product-hunt"></i><span>Power School</span></a>
-            </div>
-            <div id="link-4" class="qlink">
-               <a class="quick-link"><i class="fa fa-users"></i><span>Staff Directory</span></a>
-            </div>
-         </div>
-
-      </div>
-   </section>
-   <section class="staff-directory">
-
-   </section>
    <div id="demo"></div>
 </body>

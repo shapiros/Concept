@@ -1,12 +1,20 @@
-@media only screen and (max-width: 450px) {
-   nav{
-   height: 70px;
-   width: 100%;
-   background: #fff;
-   display: flex;
-   align-items: center;
-   }
-
+@media only screen and (min-width:320px) and (max-width:700px) {
+nav{
+height: 70px;
+width: 100%;
+background: #fff;
+display: flex;
+align-items: center;
+}
+.cover{
+   height:100vh;
+   background: url(../assets/cover_phone.jpg);
+   background-size:cover;
+   background-position:center;
+   display:flex;
+   flex-direction:column;
+   justify-content:space-between;
+}
 .nav-wrapper{
    padding: 0px 20px;
    width: 100%;
@@ -48,17 +56,75 @@ ul li a.social-icon{
    text-decoration: none;
    font-size: 10px;
 }
+/*********Progress************************/
+.progress{
+   display:flex;
+   background: rgba(0,72,128,0.8);
+   bottom:120px;
+   height: 220px;
+   width:60%;
+   margin:0px 20%;
+   flex-direction: column-reverse;
+   position: absolute;
+   justify-content: center;
+   align-items: center;
+   overflow:hidden;
+   border-radius:5px;
+   border:5px solid white;
+   margin-bottom:0;
+   z-index:9999;
+}
 
+.progress .circular-progress{
+   height: 80px;
+   min-width: 80px;
+   border-radius: 50%;
+   margin: 10px 0px 55px 0px;
+   border: 3px solid rgb(254, 182, 38);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
 
+.progress .circular-progress p{
+   color: #fff;
+   font-size: 20px;
+   font-weight: bold;
+}
+.progress a.btn-large{
+   padding: 15px 1000px;
+   font-size: 10px;
+   position:absolute;
+   bottom:0;
+}
+.progress .progress-msg{
+   text-transform: uppercase;
+   color: #fff;
+   font-weight: bold;
+   font-size: 15px;
+}
 
-
-
-
-
+.subscribe{
+   padding-bottom:25px;
+   height: 149px;
+   display: flex;
+   flex-direction:column;
+   background: #3b4b64;
+   align-items: center;
+   justify-content: flex-end;
+   position: relative;
+   bottom: 0px;
+}
+.subscribe p{
+   font-weight:bold;
+   color:#fff;
+   font-style:italic;
+   font-size:13px
+}
+/*********About School Container**********/
    .container{
-      padding: 50px 40px;
+      padding: 20px 40px;
    }
-
    section.about-school{
       padding-bottom: 50px;
    }
@@ -75,10 +141,11 @@ ul li a.social-icon{
    }
    .about-school-container div.text p{
       line-height: 1.8;
-      font-size: 15px;
-      font-weight: 500;
+      font-size: 16px;
+      font-weight: 400;
       text-align: center;
-      padding-bottom: 30px;
+      padding-bottom: 20px;
+      text-align:justify;
    }
 
    h2.section-title span.divider{
@@ -102,14 +169,16 @@ ul li a.social-icon{
       font-size: 20px;
       width: 100%;
       text-align: center;
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-      padding-bottom: 10px;
+      padding-bottom: 20px;
    }
-
+   h2.section-title i{
+      margin-right: 20px;
+   }
    h2.section-title span.text{
       font-weight: normal;
       color: #000;
    }
+
    a.btn{
       border-radius: 5px;
       background-color: rgb(254, 182, 38);
@@ -123,7 +192,7 @@ ul li a.social-icon{
    a.btn-large{
      border-radius: 5px;
      background-color: rgb(254, 182, 38);
-     padding: 15px 40px;
+     padding: 12px 50px;
      white-space: nowrap;
      justify-content: center;
      align-items: center;
@@ -132,5 +201,71 @@ ul li a.social-icon{
      color:#000;
      font-size: 15px;
      text-decoration: none;
+   }
+
+   section.fe-ln{
+      background:#f8f8f8;
+      padding: 20px 40px;
+   }
+   section.latest-news{
+      margin-top:40px;
+   }
+   .f-event,.l-news{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 20px;
+      background:#fff;
+      border: 1px solid rgba(0,0,0,0.2);
+      margin-bottom:15px;
+      border-radius:4px;
+   }
+   .f-event .date{
+      height: 30px;
+      min-width: 30px;
+      max-width: 30px;
+      border: 1px solid #094a7e;
+      color: #094a7e;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      position:absolute;
+   }
+   p.month{
+      margin:0px;
+      font-size: 10px;
+      text-transform: uppercase;
+      line-height: 1;
+   }
+   p._date{
+      margin: 0px;
+      font-size: 10px;
+      text-transform: uppercase;
+      line-height: 1;
+   }
+   .body {
+      position:relative;
+   }
+   .f-event .body p.time-venue,.l-news .body p.time-venue{
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(0,0,0,0.5);
+   }
+   h3.event-title{
+      margin:0;
+   }
+   h3.event-title.event{
+      margin:0;
+      margin-left:42px;
+   }
+   p.description{
+      margin-bottom:0px;
+   }
+   section.quicklinks{
+      display:none;
    }
 }
