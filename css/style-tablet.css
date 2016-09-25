@@ -1,14 +1,16 @@
-@media only screen and (min-width:320px) and (max-width:700px) {
+@media only screen and (min-width:720px) and (max-width:1024px) {
 nav{
 height: 54px;
 width: 100%;
 background: #fff;
 display: flex;
 align-items: center;
+position: relative;
+z-index: 9999;
 }
 .cover{
-   height:115vh;
-   background: url(../assets/cover_phone.jpg);
+   height:70vh;
+   background: url(../assets/cover.jpeg);
    background-size:cover;
    background-position:center;
    display:flex;
@@ -16,7 +18,7 @@ align-items: center;
    justify-content:space-between;
 }
 .nav-wrapper{
-   padding: 0px 20px;
+   padding: 0px 60px;
    width: 100%;
    display: flex;
    flex-direction: row;
@@ -31,9 +33,15 @@ img.navbar-logo{
 .connect-with-us{
    display: flex;
    align-items: center;
+   font-weight: 500;
+   color: #094a7e;
+   font-style: italic;
 }
 .connect-with-us-text{
-   display: none;
+   font-weight: 500;
+   color: #094a7e;
+   font-style: italic;
+   font-size: 14px;
 }
 ul.social-links{
    list-style: none;
@@ -56,14 +64,22 @@ ul li a.social-icon{
    text-decoration: none;
    font-size: 10px;
 }
+ul li a.social-icon:hover{
+   border: solid 2px #094a7e;
+   background: #094a7e;
+   color: #fff;
+}
+ul li a.social-icon:hover i{
+   color:#fff;
+}
 /*********Progress************************/
 .progress{
    display:flex;
    background: rgba(0,72,128,0.8);
-   bottom:25px;
-   height: 220px;
-   width:60%;
-   margin:0px 20%;
+   top:50px;
+   height: 250px;
+   width:30%;
+   margin:0px 60px;
    flex-direction: column-reverse;
    position: absolute;
    justify-content: center;
@@ -72,14 +88,13 @@ ul li a.social-icon{
    border-radius:5px;
    border:3px solid white;
    margin-bottom:0;
-   z-index:9999;
 }
 
 .progress .circular-progress{
-   height: 80px;
-   min-width: 80px;
+   height: 120px;
+   min-width: 120px;
    border-radius: 50%;
-   margin: 10px 0px 55px 0px;
+   margin: 10px 0px 60px 0px;
    border: 3px solid rgb(254, 182, 38);
    display: flex;
    align-items: center;
@@ -101,25 +116,25 @@ ul li a.social-icon{
    text-transform: uppercase;
    color: #fff;
    font-weight: bold;
-   font-size: 15px;
+   font-size: 12px;
 }
 
 .subscribe{
-   padding-bottom:25px;
-   height: 149px;
+   height: 70px;
    display: flex;
-   flex-direction:column;
+   flex-direction:row;
    background: #3b4b64;
    align-items: center;
-   justify-content: flex-end;
+   justify-content: space-between;;
    position: relative;
    bottom: 0px;
+   padding: 0px 60px;
 }
 .subscribe p{
    font-weight:bold;
    color:#fff;
    font-style:italic;
-   font-size:13px
+   font-size:15px
 }
 /*********About School Container**********/
    .container{
@@ -140,12 +155,12 @@ ul li a.social-icon{
       text-align: center;
    }
    .about-school-container div.text p{
-      line-height: 1.8;
-      font-size: 16px;
+      line-height: 2;
+      font-size: 13px;
       font-weight: 400;
       text-align: center;
       padding-bottom: 20px;
-      text-align:justify;
+      margin-top: 60px;
    }
 
    h2.section-title span.divider{
@@ -154,24 +169,27 @@ ul li a.social-icon{
 
    .about-school-container div.video{
       width: 100%;
+      display: flex;
+      justify-content: center;
    }
 
    .about-school-container div.video video,.about-school-container div.video iframe{
-      width: 100%;
+      width: 75%;
+      min-height: 300px;
+      max-height: auto;
+      box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.2);
       background-image: url(../assets/video-ph.png);
       background-size: cover;
       background-position: center;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
    }
 
    h2.section-title{
       text-transform: uppercase;
       color: #094a7e;
       font-weight: 800;
-      font-size: 20px;
+      font-size: 30px;
       width: 100%;
       text-align: center;
-      padding-bottom: 20px;
    }
    h2.section-title i{
       margin-right: 20px;
@@ -192,16 +210,16 @@ ul li a.social-icon{
    }
 
    a.btn-large{
-     border-radius: 5px;
+     border-radius: 2px;
      background-color: rgb(254, 182, 38);
-     padding: 12px 50px;
+     padding: 10px 50px;
      white-space: nowrap;
      justify-content: center;
      align-items: center;
      text-transform: uppercase;
      font-weight: bold;
      color:#000;
-     font-size: 15px;
+     font-size: 13px;
      text-decoration: none;
    }
 

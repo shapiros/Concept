@@ -1,5 +1,4 @@
-var id = "dba3511f-32ef-486f-ade2-7540ae28922e";
-var school = {
+var yourSchool = {
     "dba3511f-32ef-486f-ade2-7540ae28922e": {
         "id": "dba3511f-32ef-486f-ade2-7540ae28922e",
         "parent_id": "root",
@@ -179,23 +178,3 @@ var school = {
         ]
     }
 };
-var blocks = school[id].blocks;
-function getSocialLinks(){
-   var facebook = school[id].thirdPartyLinks[1];
-   var twitter = school[id].thirdPartyLinks[2];
-   $("#facebook-link").attr('href',facebook.value);
-   $("#twitter-link").attr('href',twitter.value);
-}
-function getAboutData(){
-   var msg = blocks[0].items[0].message;
-   var title = blocks[0].items[0].title;
-   $("#abt-text").html(msg.substring(0,400)+"...");
-   $("#abt-title").html("<span class=\"text\">"+title.substring(0,title.indexOf(" "))+"</span>"+title.substring(title.indexOf(" ")));
-   $(".text a.btn-large").attr('href',blocks[0].items[0].url)
-}
-
-$(document).ready( function(){
-   $(".loader").delay(1000).fadeOut();
-   getSocialLinks();
-   getAboutData();
-});
