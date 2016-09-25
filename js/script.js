@@ -151,7 +151,7 @@ var school = {
                         "url": "http://amshq.org/Family-Resources/Montessori-Education-and-Your-Child",
                         "image": null,
                         "timezone": "America/Denver",
-                        "timestamp": "2016-09-01 14:10:00"
+                        "timestamp":  "2016-09-01 14:10:00"
                     }
                 ]
             },
@@ -193,9 +193,76 @@ function getAboutData(){
    $("#abt-title").html("<span class=\"text\">"+title.substring(0,title.indexOf(" "))+"</span>"+title.substring(title.indexOf(" ")));
    $(".text a.btn-large").attr('href',blocks[0].items[0].url)
 }
-
+function getEventHTML(object,index){
+   var code = "<div id=\"event-"+(index+1)+"\" class=\"f-event\">";
+   if(object[index].start!=null){
+      code += "<div class=\"date\"><p class=\"month\">"+getMonth(object[index].start)+"</p>";
+      code += "<p class=\"_date\">"+object[index].start.substring(8,10)+"</p></div>";
+   }
+   else{
+      code += "<div class=\"date\">";
+      code += "<p class=\"month\">X</p></div>";
+   }
+   code += "<div class=\"body\">";
+   if(object[index].title!=null){
+      code += "<h3 class=\"event-title event\">"+object[index].title+"</h3>";
+   }
+   else{
+      code += "<h3 class=\"event-title event\">Event "+(index+1)+"</h3>";
+   }
+   if(object[index].start!=null||object[index].location!=null){
+      //2016-10-21 09:30:00
+      code += "<p class=\"time-venue\">"
+      if(object[index].start!=null&object[index].start.substring(11,16)!="00:00"){
+         code += object[index].start.substring(11,16)+" ";
+      }
+      if(object[index].end!=null&&object[index].end.substring(11,16)!="00:00"){
+            code += "- "+object[index].end.substring(11,16)+" ";
+      }
+      if(object[index].location!=null){
+            code +="<i style=\"padding:0px 10px\" class=\"fa fa-map-marker\"></i>"+ object[index].location.substring(0,30)+"...";
+      }
+      code += "</p>";
+      if(object[index].description!=null){
+         code += "<p class=\"ddesctiprion\">"+object[index].description.substring(0,200)+"..."+"</p>";
+      }
+      else{
+         code += "<p class=\"ddesctiprion\">Event Description</p>";
+      }
+   }
+   code += "</div>";
+   return code;
+}
+function getMonth(start){
+   var month = "";
+   var date = start.substring(5,7);
+   switch(date){
+      case "01": month = "JAN";break;
+      case "02": month = "FEB";break;
+      case "03": month = "MAR";break;
+      case "04": month = "APR";break;
+      case "05": month = "MAY";break;
+      case "06": month = "JUN";break;
+      case "07": month = "JUL";break;
+      case "08": month = "AUG";break;
+      case "09": month = "SEPT";break;
+      case "10": month = "OCT";break;
+      case "11": month = "NOV";break;
+      case "12": month = "DEC";break;
+   }
+   return month;
+}
+function getFeaturedEvents(){
+   var feEvents = school[id].blocks[2].items;
+   console.log(feEvents);
+   var index = 0;
+   feEvents.forEach( function(){
+      $(".featured-events").append(getEventHTML(feEvents,index++));
+   });
+}
 $(document).ready( function(){
    $(".loader").delay(1000).fadeOut();
    getSocialLinks();
    getAboutData();
+   getFeaturedEvents();
 });
