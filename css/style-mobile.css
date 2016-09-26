@@ -154,13 +154,14 @@ ul li a.social-icon{
 
    .about-school-container div.video{
       width: 100%;
+      display: flex;
+      justify-content: center;
    }
 
    .about-school-container div.video video,.about-school-container div.video iframe{
-      width: 100%;
+      width: 320px;
+      height: 180px;
       background-image: url(../assets/video-ph.png);
-      background-size: cover;
-      background-position: center;
       box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
    }
 

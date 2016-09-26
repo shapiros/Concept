@@ -131,6 +131,9 @@ a.btn:hover,a.btn-large:hover{
       width: 45%;
       padding: 30px 0px 50px 50px;
    }
+   .slide{
+      position: relative;
+   }
    .f-event,.l-news{
       display: flex;
       flex-direction: row;
@@ -180,7 +183,6 @@ a.btn:hover,a.btn-large:hover{
       height: 100px;
       min-width: 150px;
       background: #eceff1;
-      background: url(../assets/news-image.png);
       background-size: cover;
       background-position: right;
    }

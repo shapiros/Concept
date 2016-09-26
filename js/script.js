@@ -193,26 +193,33 @@ function getAboutData(){
    $("#abt-title").html("<span class=\"text\">"+title.substring(0,title.indexOf(" "))+"</span>"+title.substring(title.indexOf(" ")));
    $(".text a.btn-large").attr('href',blocks[0].items[0].url)
 }
-function getEventHTML(object,index){
-   var code = "<div id=\"event-"+(index+1)+"\" class=\"f-event\">";
-   if(object[index].start!=null){
-      code += "<div class=\"date\"><p class=\"month\">"+getMonth(object[index].start)+"</p>";
-      code += "<p class=\"_date\">"+object[index].start.substring(8,10)+"</p></div>";
+function getEventHTML(object,index,n){
+   var code = "";
+   if(index%n==0){
+      code += "<div class=\"slide\" id=\"slide-"+(index/3+1)+"\">";
    }
-   else{
-      code += "<div class=\"date\">";
-      code += "<p class=\"month\">X</p></div>";
-   }
+   //Event Code Start
+   code += "<div id=\"event-"+(index+1)+"\" class=\"f-event\">";
+      if(object[index].start!=null){
+         code += "<div class=\"date\"><p class=\"month\">"+getMonth(object[index].start)+"</p>";
+         code += "<p class=\"_date\">"+object[index].start.substring(8,10)+"</p></div>";
+      }
+      else{
+         code += "<div class=\"date\">";
+         code += "<p class=\"month\">X</p></div>";
+      }
+
    code += "<div class=\"body\">";
-   if(object[index].title!=null){
-      code += "<h3 class=\"event-title event\">"+object[index].title+"</h3>";
-   }
-   else{
-      code += "<h3 class=\"event-title event\">Event "+(index+1)+"</h3>";
-   }
-   if(object[index].start!=null||object[index].location!=null){
-      //2016-10-21 09:30:00
-      code += "<p class=\"time-venue\">"
+
+      if(object[index].title!=null){
+         code += "<h3 class=\"event-title event\">"+object[index].title+"</h3>";
+      }
+      else{
+         code += "<h3 class=\"event-title event\">Event "+(index+1)+"</h3>";
+      }
+
+      if(object[index].start!=null||object[index].location!=null){
+   code += "<p class=\"time-venue\">"//2016-10-21 09:30:00
       if(object[index].start!=null&object[index].start.substring(11,16)!="00:00"){
          code += object[index].start.substring(11,16)+" ";
       }
@@ -224,13 +231,17 @@ function getEventHTML(object,index){
       }
       code += "</p>";
       if(object[index].description!=null){
-         code += "<p class=\"ddesctiprion\">"+object[index].description.substring(0,200)+"..."+"</p>";
+         code += "<p class=\"description\">"+object[index].description.substring(0,200)+"..."+"</p>";
       }
       else{
-         code += "<p class=\"ddesctiprion\">Event Description</p>";
+         code += "<p class=\"description\">Event Description Not Avilable</p>";
       }
    }
-   code += "</div>";
+   code += "</div></div>";
+   if(index!=0&&index%(n-1)==0){
+      code += "</div>";
+   }
+   //Event Code End
    return code;
 }
 function getMonth(start){
@@ -254,15 +265,98 @@ function getMonth(start){
 }
 function getFeaturedEvents(){
    var feEvents = school[id].blocks[2].items;
-   console.log(feEvents);
    var index = 0;
+   var pod = 3;//pod->Posts to Display
+   var code ="";
    feEvents.forEach( function(){
-      $(".featured-events").append(getEventHTML(feEvents,index++));
+      //console.log(getEventHTML(feEvents,index++,no_of_posts));
+      //$(".featured-events").append(getEventHTML(feEvents,index++,no_of_posts));
+      code+=getEventHTML(feEvents,index++,pod);
    });
+   $(".featured-events").append(code);
+   console.log(1+feEvents.length/pod);
+   var i =1;
+   for(i=1;i<=1+feEvents.length/3;i++){
+      $("#slide-"+i).hide();
+   }
+   $("#slide-1").show();
 }
+function getNewsMonth(start){
+   var month = "";
+   var date = start.substring(5,7);
+   switch(date){
+      case "01": month = "January";break;
+      case "02": month = "February";break;
+      case "03": month = "March";break;
+      case "04": month = "April";break;
+      case "05": month = "May";break;
+      case "06": month = "June";break;
+      case "07": month = "July";break;
+      case "08": month = "August";break;
+      case "09": month = "September";break;
+      case "10": month = "October";break;
+      case "11": month = "November";break;
+      case "12": month = "December";break;
+   }
+   return month;
+}
+function getNewsHTML(object,index,n){
+   var code = "";
+   if(index%n==0){
+      code += "<div class=\"slide\" id=\"news-slide-"+(index/3+1)+"\">";
+   }
+   //Event Code Start
+   code += "<div id=\"news-"+(index+1)+"\" class=\"l-news\">";
+   if(object[index].image!=null){
+      code += "<div class=\"thumbnail\" style=\"background:url("+object[index].image+");background-size: cover;\"></div>"
+   }
+   else{
+      code += "<div class=\"thumbnail\" style=\"background:url(assets/video-ph.png)\"></div>"
+   }
+   code += "<div class=\"body\">";
+      if(object[index].title!=null){
+         code += "<h3 class=\"event-title\">"+object[index].title.substring(0,50)+"...</h3>";
+      }
+      else{
+         code += "<h3 class=\"event-title\">Event "+(index+1)+"</h3>";
+      }
+      if(object[index].timestamp!=null){
+      code += "<p class=\"time-venue\">"//2016-10-21 09:30:00
+      code += getNewsMonth(object[index].timestamp)+", "+object[index].timestamp.substring(0,4);
+      code += "</p>";
+      }
+      if(object[index].description!=null){
+         code += "<p class=\"description\">"+object[index].description.substring(0,200)+"..."+"</p>";
+      }
+      else{
+         code += "<p class=\"description\">Event Description Not Avilable</p>";
+      }
+
+      code += "</div></div>";
+   if(index!=0&&index%(n-1)==0){
+      code += "</div>";
+   }
+   //Event Code End
+   return code;
+}
+function getLatestNews(){
+   var news = school[id].blocks[3].items;
+   var index = 0;
+   var pod = 3;//pod->Posts to Display
+   var code ="";
+   news.forEach( function(){
+      //console.log(getEventHTML(feEvents,index++,no_of_posts));
+      //$(".featured-events").append(getEventHTML(feEvents,index++,no_of_posts));
+      code+=getNewsHTML(news,index++,pod);
+   });
+   //console.log(code);
+   $(".latest-news").append(code);
+}
+
 $(document).ready( function(){
    $(".loader").delay(1000).fadeOut();
    getSocialLinks();
    getAboutData();
    getFeaturedEvents();
+   getLatestNews();
 });
