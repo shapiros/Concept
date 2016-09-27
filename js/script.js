@@ -185,6 +185,7 @@ function getSocialLinks(){
    var twitter = school[id].thirdPartyLinks[2];
    $("#facebook-link").attr('href',facebook.value);
    $("#twitter-link").attr('href',twitter.value);
+   $("#school-name").html(school[id].title);
 }
 function getAboutData(){
    var msg = blocks[0].items[0].message;
@@ -195,9 +196,6 @@ function getAboutData(){
 }
 function getEventHTML(object,index,n){
    var code = "";
-   if(index%n==0){
-      code += "<div class=\"slide\" id=\"slide-"+(index/3+1)+"\">";
-   }
    //Event Code Start
    code += "<div id=\"event-"+(index+1)+"\" class=\"f-event\">";
       if(object[index].start!=null){
@@ -238,9 +236,6 @@ function getEventHTML(object,index,n){
       }
    }
    code += "</div></div>";
-   if(index!=0&&index%(n-1)==0){
-      code += "</div>";
-   }
    //Event Code End
    return code;
 }
@@ -263,23 +258,26 @@ function getMonth(start){
    }
    return month;
 }
-function getFeaturedEvents(){
+function getFeaturedEvents(pod){
    var feEvents = school[id].blocks[2].items;
-   var index = 0;
-   var pod = 3;//pod->Posts to Display
-   var code ="";
-   feEvents.forEach( function(){
-      //console.log(getEventHTML(feEvents,index++,no_of_posts));
-      //$(".featured-events").append(getEventHTML(feEvents,index++,no_of_posts));
-      code+=getEventHTML(feEvents,index++,pod);
-   });
-   $(".featured-events").append(code);
-   console.log(1+feEvents.length/pod);
-   var i =1;
-   for(i=1;i<=1+feEvents.length/3;i++){
-      $("#slide-"+i).hide();
+   console.log(getNumberOfSlides(feEvents,pod));
+   var index = 0,code ="",j=1;
+   var posts = feEvents.length;
+   while(index<posts){
+     var i=pod;
+     code += "<div id=\"event-slide-"+j+"\"class=\"slide\">";
+     while(i--) {
+       code += getEventHTML(feEvents,index++);
+       if(index==posts)break;
+     }
+     code+="</div>";
+     if(index==posts)break;
+     j++;
    }
-   $("#slide-1").show();
+   //feEvents.forEach( function(){
+   //code+=getEventHTML(feEvents,index++);
+   //});
+   $(".featured-events").append(code);
 }
 function getNewsMonth(start){
    var month = "";
@@ -300,11 +298,8 @@ function getNewsMonth(start){
    }
    return month;
 }
-function getNewsHTML(object,index,n){
+function getNewsHTML(object,index){
    var code = "";
-   if(index%n==0){
-      code += "<div class=\"slide\" id=\"news-slide-"+(index/3+1)+"\">";
-   }
    //Event Code Start
    code += "<div id=\"news-"+(index+1)+"\" class=\"l-news\">";
    if(object[index].image!=null){
@@ -331,32 +326,51 @@ function getNewsHTML(object,index,n){
       else{
          code += "<p class=\"description\">Event Description Not Avilable</p>";
       }
-
       code += "</div></div>";
-   if(index!=0&&index%(n-1)==0){
-      code += "</div>";
-   }
    //Event Code End
    return code;
 }
-function getLatestNews(){
+function getLatestNews(pod){
    var news = school[id].blocks[3].items;
-   var index = 0;
-   var pod = 3;//pod->Posts to Display
-   var code ="";
-   news.forEach( function(){
-      //console.log(getEventHTML(feEvents,index++,no_of_posts));
-      //$(".featured-events").append(getEventHTML(feEvents,index++,no_of_posts));
-      code+=getNewsHTML(news,index++,pod);
-   });
-   //console.log(code);
+   var index = 0,code ="",j=1;
+   var posts = news.length;
+   while(index<posts){
+     var i=pod;
+     code += "<div id=\"news-slide-"+j+"\"class=\"slide\">";
+     while(i--) {
+       code += getNewsHTML(news,index++);
+       if(index==posts)break;
+     }
+     code+="</div>";
+     if(index==posts)break;
+     j++;
+   }
+   //news.forEach( function(){
+   //    code+=getNewsHTML(news,index++,pod);
+   //});
    $(".latest-news").append(code);
 }
-
+function getNumberOfSlides(object,postsToDisplay){
+  var i,posts = object.length;
+  return parseInt(posts/postsToDisplay);
+}
+function hideSlides(){}
 $(document).ready( function(){
    $(".loader").delay(1000).fadeOut();
    getSocialLinks();
    getAboutData();
-   getFeaturedEvents();
-   getLatestNews();
+   var no_of_posts;
+   if($(document).width()>1024){
+     no_of_posts = 3;
+   }else if($(document).width()<=700){
+     no_of_posts = 1;
+   }else{
+     no_of_posts = 2;
+   }
+   console.log($(document).width());
+   getFeaturedEvents(no_of_posts);
+   getLatestNews(no_of_posts);
+   $(".slide").hide();
+   $("#news-slide-1").show();
+   $("#event-slide-1").show();
 });
