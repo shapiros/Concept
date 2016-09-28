@@ -194,7 +194,7 @@ function getAboutData(){
    $("#abt-title").html("<span class=\"text\">"+title.substring(0,title.indexOf(" "))+"</span>"+title.substring(title.indexOf(" ")));
    $(".text a.btn-large").attr('href',blocks[0].items[0].url)
 }
-function getEventHTML(object,index,n){
+function getEventHTML(object,index){
    var code = "";
    //Event Code Start
    code += "<div id=\"event-"+(index+1)+"\" class=\"f-event\">";
@@ -260,7 +260,6 @@ function getMonth(start){
 }
 function getFeaturedEvents(pod){
    var feEvents = school[id].blocks[2].items;
-   console.log(getNumberOfSlides(feEvents,pod));
    var index = 0,code ="",j=1;
    var posts = feEvents.length;
    while(index<posts){
@@ -354,7 +353,37 @@ function getNumberOfSlides(object,postsToDisplay){
   var i,posts = object.length;
   return parseInt(posts/postsToDisplay);
 }
-function hideSlides(){}
+function getLocation(){
+  var location = school[id].locations[0];
+  //var lat = parseFloat(location.coordinates.substring(1,location.coordinates.indexOf(",")));
+  //var long = parseFloat(location.coordinates.substring(location.coordinates.indexOf(",")+1,location.coordinates.indexOf(")")));
+  //console.log(lat+""+long);
+  var code="";
+
+    if(location.address!=null){
+      code += "<p class=\"address\"><i class=\"fa fa-location-arrow\"></i><span>Address: </span>"+location.address+", "+location.city+", "+location.state+"</p>";
+    }
+    if(location.phone!=null){
+     code += "<p class=\"address\"><i class=\"fa fa-phone\"></i><span>Phone: </span>"+location.phone+"</p>";
+    }
+    mapLocation();
+    $("#mylocation").append(code);
+}
+
+function mapLocation() {
+  var coordinates = school[id].locations[0].coordinates;
+  var lat = parseFloat(coordinates.substring(1,coordinates.indexOf(",")));
+  var long = parseFloat(coordinates.substring(coordinates.indexOf(",")+1,coordinates.indexOf(")")));
+  var mapOptions = {
+    center: new google.maps.LatLng(lat,long),
+    zoom: 18,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  var marker = new google.maps.Marker({position:mapOptions.center});
+  marker.setMap(map);
+}
+
 $(document).ready( function(){
    $(".loader").delay(1000).fadeOut();
    getSocialLinks();
@@ -367,9 +396,10 @@ $(document).ready( function(){
    }else{
      no_of_posts = 2;
    }
-   console.log($(document).width());
    getFeaturedEvents(no_of_posts);
    getLatestNews(no_of_posts);
+   getLocation();
+   mapLocation();
    $(".slide").hide();
    $("#news-slide-1").show();
    $("#event-slide-1").show();
