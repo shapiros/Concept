@@ -303,10 +303,10 @@ function getNewsHTML(object,index){
    //Event Code Start
    code += "<div id=\"news-"+(index+1)+"\" class=\"l-news\">";
    if(object[index].image!=null){
-      code += "<div class=\"thumbnail\" style=\"background:url("+object[index].image+");background-size: cover;\"></div>"
+      code += "<div class=\"thumbnail\" style=\"background:url("+object[index].image+");background-position: center;background-size: cover;\"></div>"
    }
    else{
-      code += "<div class=\"thumbnail\" style=\"background:url(assets/video-ph.png)\"></div>"
+      code += "<div class=\"thumbnail\" style=\"background:url(assets/video-ph.png);background-position: center;background-size: cover;\"></div>"
    }
    code += "<div class=\"body\">";
       if(object[index].title!=null){
