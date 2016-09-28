@@ -38,6 +38,68 @@ a.btn:hover,a.btn-large:hover{
    box-shadow: 0px 10px 28.5px 1.5px rgba(0, 0, 0, 0.2);
 }
 @media only screen and (min-width: 1025px) {
+  section.footer{
+    background: #212121;
+    display: block;
+    height: 250px;
+    padding: 30px 140px;
+  }
+  .footer div h2.f-title{
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: normal;
+  }
+  .footer div.location{
+    width: 30%;
+    display: inline-block;
+  }
+  .footer div.map{
+    width: 30%;
+    display: inline-block;
+    height: 250px;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 2%;
+    overflow: hidden;
+  }
+  .footer div.map div#map{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .footer>div.branding{
+    display: block;
+    float: right;
+    width: 20%;
+    padding-top: 20px;
+  }
+  div.branding>a>img{
+    height: 40px;
+    width: auto;
+    float: left;
+  }
+  div.branding>ul{
+    float: left;
+    margin-top: 50px;
+    padding: 0;
+  }
+  div.branding>ul>li>a{
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  .footer>div>p{
+    color:#fff;
+    font-size: 0.95rem;
+  }
+  .footer>div>p span{
+    color:rgb(254, 182, 38);
+    font-weight: bold;
+    padding: 0px 5px 0px 20px;
+  }
+  section.footer div h2.f-title>i{
+    padding-right: 20px;
+  }
   section.social-media{
     display: block;
     padding: 30px 100px;

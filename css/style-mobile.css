@@ -56,6 +56,80 @@ ul li a.social-icon{
    text-decoration: none;
    font-size: 10px;
 }
+/****************Footer*************************/
+section.footer{
+  background: #212121;
+  display: block;
+  height: 350px;
+  padding: 30px 60px;
+  position: relative;
+  padding-top: 200px;
+}
+.footer div h2.f-title{
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+.footer div.location{
+  width: 100%;
+  display: inline-block;
+}
+.footer div.map{
+  width: 100%;
+  display: inline-block;
+  height: 200px;
+  position: absolute;
+  overflow: hidden;
+  top:0px;
+  left:0px;
+}
+.footer div.map div#map{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.footer>div.branding{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: right;
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+}
+div.branding>a{
+  display: flex;
+  justify-content: center;
+}
+div.branding>a>img{
+  height: 40px;
+  width: auto;
+}
+div.branding>ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+div.branding>ul>li>a{
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px;
+
+}
+.footer>div>p{
+  color:#fff;
+  font-size: 0.95rem;
+}
+.footer>div>p span{
+  color:rgb(254, 182, 38);
+  font-weight: bold;
+  padding: 0px 5px 0px 20px;
+}
+section.footer div h2.f-title>i{
+  padding-right: 20px;
+}
+
 /****************Social Media*******************/
 section.social-media{
   display: flex;

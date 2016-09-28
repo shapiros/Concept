@@ -72,6 +72,78 @@ ul li a.social-icon:hover{
 ul li a.social-icon:hover i{
    color:#fff;
 }
+/****************Footer*************************/
+section.footer{
+  background: #212121;
+  display: block;
+  height: 350px;
+  padding: 30px 60px;
+}
+.footer div h2.f-title{
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+.footer div.location{
+  width: 50%;
+  display: inline-block;
+}
+.footer div.map{
+  width: 45%;
+  display: inline-block;
+  height: 200px;
+  position: absolute;
+  border-radius: 10px;
+  right: 60px;
+  margin-left: 20px;
+  overflow: hidden;
+}
+.footer div.map div#map{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.footer>div.branding{
+  display: flex;
+  justify-content: space-between;
+  float: right;
+  width: 100%;
+  margin-top: 70px;
+  position: relative;
+}
+div.branding>a>img{
+  height: 40px;
+  width: auto;
+  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+div.branding>ul{
+  float: right;
+  padding: 0;
+  top: 0;
+  right:0;
+  display: flex;
+  margin: 0;
+}
+div.branding>ul>li>a{
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+.footer>div>p{
+  color:#fff;
+  font-size: 0.95rem;
+}
+.footer>div>p span{
+  color:rgb(254, 182, 38);
+  font-weight: bold;
+  padding: 0px 5px 0px 20px;
+}
+section.footer div h2.f-title>i{
+  padding-right: 20px;
+}
 /****************Social Media*******************/
 section.social-media{
   display: block;

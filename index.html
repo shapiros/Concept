@@ -35,8 +35,8 @@
          SchoolBlocksApp.mapReady = function(callback) {
              if (SchoolBlocksApp.mapLoaded === true) {
                  callback();
-             } else {
                  SchoolBlocksApp.mapCallbacks.push(callback);
+             } else {
              }
          };
 
@@ -227,9 +227,28 @@
           </p>
         </div>
       </div>
+   </section>
+   <section class="footer">
+     <div id="mylocation" class="location">
+        <h2 class="f-title"><i class="fa fa-map-marker"></i>Our Location</h2>
+     </div>
+     <div class="map">
+        <div id="map">
 
+        </div>
+     </div>
+     <div class="branding">
+      <a class="logo"><img src="assets/Logo.png"/></a><br />
+      <ul>
+         <li><a id="twitter-link" style="padding-left:0" href="#"><i class="fa fa-twitter "></i></a></li>
+         <li><a id="facebook-link" href="#"><i class="fa fa-facebook"></i></a></li>
+         <li><a id="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+         <li><a id="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+     </div>
    </section>
    <script src="js/jquery-3.1.0.js"></script>
+   <script src="https://maps.googleapis.com/maps/api/js"></script>
    <script src="js/script.js"></script>
    <script src="js/lightslider.js"></script>
 </body>
