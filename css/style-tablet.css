@@ -72,6 +72,116 @@ ul li a.social-icon:hover{
 ul li a.social-icon:hover i{
    color:#fff;
 }
+/****************Social Media*******************/
+section.social-media{
+  display: block;
+  padding: 30px 100px;
+  background-color: #094A7E;
+  height: 500px
+}
+h2.sm-title{
+  font-weight: 500;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+h2.sm-title i.fa{
+  margin-right: 10px;
+}
+section.social-media div.subscribe-form{
+  width: 80%;
+  display: inline-block;
+  padding: 0px 10%;
+  padding-bottom: 40px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgba(255,255,255,0.3)
+}
+div.subscribe-form h2.sm-title{
+  text-align: center;
+}
+div.form{
+  position: relative;
+}
+input[type=email] {
+  width: 100%;
+  padding: 15px 56px;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 0;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+input[type=email]:hover,input[type=email]:focus,input[type=submit]:hover,input[type=submit]:focus{
+  outline: none;
+}
+input[type=submit]{
+  background-color:rgb(254, 182, 38);
+  padding: 13px 10%;
+  font-weight: normal;
+  color:#000;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 0px 3px 3px 0px;
+  font-family: "Open Sans",sans-serif;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+input[type=submit]:hover{
+  box-shadow: 0px 10px 28.5px 1.5px rgba(0, 0, 0, 0.2);
+}
+form>i{
+  position: absolute;
+  top:16px;
+  left:20px;
+}
+ div.recent-tweets{
+  width: 40%;
+  display: inline-block;
+  float: left;
+}
+.twitter-post{
+  margin: 30px 0px;
+}
+p.author{
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+p.post{
+  font-size: 1.0rem;
+  font-weight: normal;
+  color: rgba(255,255,255,0.8);
+  margin: 0;
+}
+div.instagram-posts{
+  width: 40%;
+  display: inline-block;
+  float: right;
+  margin-left: 20px;
+}
+.instagram-posts.posts{
+
+}
+.posts div.i-post{
+  display: block;
+  width: 25%;
+  margin: 2% 2%;
+  overflow: hidden;
+  display: inline-block;
+}
+.posts div.i-post a{
+  display: flex;
+  width: 50px;
+  height:50px;
+  border-radius: 7px;
+  background-image: url(../assets/video-ph.png);
+  background-position: center;
+  background-size: cover;
+  color: transparent;
+}
 /*********Progress************************/
 .progress{
    display:flex;
