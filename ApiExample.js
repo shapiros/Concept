@@ -106,7 +106,7 @@ SchoolBlocksApp.Api = function (baseUrl) {
                     "type": "video",
                     "title": "SchoolBlocks Intro",
                     "url": "https://youtu.be/xdl0UWk-1FQ",
-                    "embedUrl": "http://www.youtube.com/embed/xdl0UWk-1FQ?modestbranding=1&amp;showinfo=0&amp;rel=0"
+                    "embedUrl": "https://www.youtube.com/embed/xdl0UWk-1FQ?modestbranding=1&amp;showinfo=0&amp;rel=0"
                 },
                 {
                     "id": 3,
