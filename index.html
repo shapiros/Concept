@@ -2,16 +2,19 @@
 <html lang="en-us" dir="ltr">
 <head>
    <meta charset="utf-8">
-   <title id="school-name">Boston School</title>
+   <title id="school-name">Loading</title>
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="https://d6vze32yv269z.cloudfront.net/assets/2.2/config/../assets/dist/css/SchoolBlocksApp.bundles.vendor.css" />
-    <link rel="stylesheet" type="text/css" href="https://d6vze32yv269z.cloudfront.net/assets/2.2/config/../assets/dist/css/SchoolBlocksApp.bundles.app.css" />
-    <link rel="stylesheet" type="text/css" href="https://d6vze32yv269z.cloudfront.net/assets/2.2/config/../assets/dist/css/SchoolBlocksApp.bundles.blocks.css" />
-    <link rel="stylesheet" type="text/css" href="https://d6vze32yv269z.cloudfront.net/assets/2.2/assets/dist/bower_components/contentbuilderjs/assets/default/content.css" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="stylesheet" type="text/css" href="https://d6vze32yv269z.cloudfront.net/assets/2.2/config/../assets/dist/css/SchoolBlocksApp.bundles.vendor.css" />
+   <link rel="stylesheet" type="text/css" href="https://d6vze32yv269z.cloudfront.net/assets/2.2/config/../assets/dist/css/SchoolBlocksApp.bundles.app.css" />
+   <link rel="stylesheet" type="text/css" href="https://d6vze32yv269z.cloudfront.net/assets/2.2/config/../assets/dist/css/SchoolBlocksApp.bundles.blocks.css" />
+   <link rel="stylesheet" type="text/css" href="https://d6vze32yv269z.cloudfront.net/assets/2.2/assets/dist/bower_components/contentbuilderjs/assets/default/content.css" />
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/style-mobile.css">
    <link rel="stylesheet" href="css/style-tablet.css">
+   <link rel="stylesheet" href="css/unslider.css">
+   <link rel="stylesheet" href="css/unslider-dots.css">
+   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
    <script type="application/javascript">
 
      /* fallback.js v1.1.7 | http://fallback.io/ | Salvatore Garbesi <sal@dolox.com> | (c) 2015 Dolox, Inc. */
@@ -70,10 +73,11 @@
      }(window, document));
 
      fallback.load({
-         "jQuery": "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
-         "jQuery.ui": "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js",
+         "jQuery": "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
+         "jQuery.ui": "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js",
          "SchoolBlocksApp.bundles.vendor":"https://d6vze32yv269z.cloudfront.net/assets/2.2/assets/dist/js/SchoolBlocksApp.bundles.vendor.js",
          "SchoolBlocksApp.bundles.app":"ApiExample.js",
+         "unslider":"js/unslider-min.js",
          "SchoolBlocksApp.bundles.pageBuilder":"js/script.js"
      }, {
          "shim": {
@@ -87,18 +91,33 @@
      SchoolBlocksApp.ready(function () {
          var api = new SchoolBlocksApp.Api();
          fallback.load("js/script.js");
-         fallback.load("js/lightslider.js");
-
+         fallback.load("js/unslider-min.js");
          api.viewOrganization('dba3511f-32ef-486f-ade2-7540ae28922e', null, null,
              ['locations', 'thirdPartyLinks', 'blocks'])
                  .done(function (response) {
                      var pb = new PageBuilder(response);
+                     var i=0;
+                     pb.blocks[5].items.forEach( function() {
+                        $("#"+pb.blocks[5].items[i++].title+" div.slider").unslider({
+                          nav: false,
+                          arrows: {
+                                  next: '<a class=\"slider-nav right\"><i class="fa fa-chevron-right"></i></a>',
+                                	prev: '<a class=\"slider-nav left\"><i class="fa fa-chevron-left"></i></a>',
+                                  }
+                        });
+                        //console.log(pb.blocks[5].items[i].title);
+                     });
                  });
-
+        $('.qlinks').unslider({
+          nav: false,
+          arrows: {
+                  next: '<a class="qlink-nav right"><i class="fa fa-chevron-right"></i></a>',
+                	prev: '<a class="qlink-nav left"><i class="fa fa-chevron-left"></i></a>',
+                  }
+        });
      }, ["SchoolBlocksApp.bundles.app", "SchoolBlocksApp.bundles.pageBuilder"]);
-
-
    </script>
+
    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
    <!--[if lt IE 9]>
@@ -123,6 +142,7 @@
          </div>
       </nav>
       <div class="cover-content">
+         <img class="desktop-only progress-background" src="assets/progress_back.png" />
          <div class="progress">
             <div class="circular-progress">
                <p>95%</p>
@@ -135,7 +155,7 @@
       </div>
       <div class="subscribe">
          <p>Recieve Email, Text & Alerts</p>
-         <a class="btn-large" href="#"></span>subscribe</a>
+         <a class="btn-large free-btn" href="#"><span><img src="assets/free_subscribe.png"</span></span>subscribe</a>
       </div>
    </section>
    <section class="about-school">
@@ -150,7 +170,6 @@
          </div>
          <div class="sb-data-block video">
              <img src="assets/placeholder-video.png" />
-
          </div>
          </div>
       </div>
@@ -160,37 +179,42 @@
          <div class="section-header">
             <h2 class="section-title lvl-2"><i class="fa fa-calendar-o"></i><span class="text">Featured </span>Events</h2>
          </div>
+         <div class="PH">
+           <img id="1" src="assets/PH/event.png"/>
+           <img id="2" class="desktop" src="assets/PH/event.png"/>
+           <img id="3" class="desktop" src="assets/PH/event.png"/>
+         </div>
       </section>
       <section class="latest-news">
          <div class="section-header">
             <h2 class="section-title lvl-2"><i class="fa fa-newspaper-o"></i><span class="text">Latest </span>News</h2>
          </div>
+         <div class="PH">
+           <img id="1" src="assets/PH/news.png"/>
+           <img id="2" class="desktop" src="assets/PH/news.png"/>
+           <img id="3" class="desktop" src="assets/PH/news.png"/>
+         </div>
       </section>
    </section>
-   <section class="quicklinks">
-      <a class="qlink-nav left"><i class="fa fa-chevron-left"></i></a>
-      <a class="qlink-nav right"><i class="fa fa-chevron-right"></i></a>
-      <div class="contents">
-         <h2 class="section-title" style="border:none;text-align:center"><i class="fa fa-link"></i><span style="color:#fff">Quick</span><span style="color:#2979b9">Links</span></h2>
-         <div class="links">
-            <div id="link-1" class="qlink">
-               <a class="quick-link"><i class="fa fa-cutlery"></i><span>Lunch Menus</span></a>
-            </div>
-            <div id="link-2" class="qlink">
-               <a class="quick-link"><i class="fa fa-sun-o"></i><span>Summer Programs</span></a>
-            </div>
-            <div id="link-3" class="qlink">
-               <a class="quick-link"><i class="fa fa-product-hunt"></i><span>Power School</span></a>
-            </div>
-            <div id="link-4" class="qlink">
-               <a class="quick-link"><i class="fa fa-users"></i><span>Staff Directory</span></a>
-            </div>
-         </div>
 
-      </div>
-   </section>
+   <section class="quicklinks"><div class="contents">
+      <h2 class="section-title" style="border:none;text-align:center"><i class="fa fa-link"></i><span style="color:#fff">Quick</span><span style="color:#2979b9">Links</span></h2>
+      <div class="qlinks"><ul>
+        <li>
+          <img class="ph" src="assets/PH/quicklink.png" alt="">
+          <img class="ph" src="assets/PH/quicklink.png" alt="">
+          <img class="ph" src="assets/PH/quicklink.png" alt="">
+          <img class="ph" src="assets/PH/quicklink.png" alt="">
+        </li>
+      </ul></div>
+   </div></section>
+
    <section class="staff-directory">
+   <h2 class="section-title center" style="border:none;margin-bottom:10px;"><span class="text">Staff </span>Directory</h2>
+   <ul class="nav nav-tabs"></ul>
+   <div class="tab-content"></div>
    </section>
+
    <section class="social-media">
       <div class="subscribe-form">
         <h2 class="sm-title subscribe-title">Sign Up For Weekly Newsletter</h2>
@@ -248,6 +272,12 @@
       </ul>
      </div>
    </section>
+   <script>
+   //$(function(){
+  //    var slider = $('.qlinks').unslider();
+  //    slider.unslider('init');
+   //});
+   </script>
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqzYNWs8xYUi9GbqcnvoLw3NGnmninvI0"></script>
 </body>
 </html>

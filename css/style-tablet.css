@@ -8,6 +8,9 @@ align-items: center;
 position: relative;
 z-index: 9999;
 }
+.desktop-only{
+  display: none;
+}
 .cover{
    height:70vh;
    background: url(../assets/cover.jpeg);
@@ -16,6 +19,9 @@ z-index: 9999;
    display:flex;
    flex-direction:column;
    justify-content:space-between;
+}
+.desktop{
+  display: none;
 }
 .nav-wrapper{
    padding: 0px 60px;
@@ -76,7 +82,7 @@ ul li a.social-icon:hover i{
 section.footer{
   background: #212121;
   display: block;
-  height: 410px;
+  height: 350px;
   padding: 30px 60px;
 }
 .footer div h2.f-title{
@@ -87,6 +93,7 @@ section.footer{
 .footer div.location{
   width: 50%;
   display: inline-block;
+  margin-top: 50px;
 }
 .footer div.map{
   width: 45%;
@@ -108,7 +115,7 @@ section.footer{
   justify-content: space-between;
   float: right;
   width: 100%;
-  margin-top: 70px;
+  margin-top: 80px;
   position: relative;
 }
 div.branding>a>img{
@@ -154,7 +161,7 @@ section.social-media{
 h2.sm-title{
   font-weight: 500;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 20px;
   margin-bottom: 40px;
 }
 h2.sm-title i.fa{
@@ -163,7 +170,8 @@ h2.sm-title i.fa{
 section.social-media div.subscribe-form{
   width: 80%;
   display: inline-block;
-  padding: 0px 10%;
+  padding: 0px 5%;
+  margin:  0px 5%;
   padding-bottom: 40px;
   margin-bottom: 30px;
   border-bottom: 2px solid rgba(255,255,255,0.3)
@@ -181,7 +189,7 @@ input[type=email] {
   display: inline-block;
   border: 0;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 14px;
 }
 input[type=email]:hover,input[type=email]:focus,input[type=submit]:hover,input[type=submit]:focus{
   outline: none;
@@ -191,12 +199,16 @@ input[type=submit]{
   padding: 13px 10%;
   font-weight: normal;
   color:#000;
-  font-size: 1rem;
+  font-size: 14px;
   border: 0;
   border-radius: 0px 3px 3px 0px;
   font-family: "Open Sans",sans-serif;
-  display: inline-block;
+  display: flex;
   position: absolute;
+  height: 100%;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
   top: 0;
   right: 0;
 }
@@ -217,13 +229,13 @@ form>i{
   margin: 30px 0px;
 }
 p.author{
-  font-size: 0.85rem;
+  font-size: 12px;
   font-weight: 600;
   color: #fff;
   margin: 0;
 }
 p.post{
-  font-size: 1.0rem;
+  font-size: 14px;
   font-weight: normal;
   color: rgba(255,255,255,0.8);
   margin: 0;
@@ -233,9 +245,6 @@ div.instagram-posts{
   display: inline-block;
   float: right;
   margin-left: 20px;
-}
-.instagram-posts.posts{
-
 }
 .posts div.i-post{
   display: block;
@@ -338,7 +347,7 @@ div.instagram-posts{
    }
    .about-school-container div.text p{
       line-height: 2;
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 400;
       text-align: center;
       padding-bottom: 20px;
@@ -372,6 +381,7 @@ div.instagram-posts{
       font-size: 30px;
       width: 100%;
       text-align: center;
+      margin-bottom: 40px;
    }
    h2.section-title i{
       margin-right: 20px;
@@ -404,13 +414,27 @@ div.instagram-posts{
      font-size: 13px;
      text-decoration: none;
    }
-
+/******************
+Featured Events & Latest News
+******************/
    section.fe-ln{
       background:#f8f8f8;
       padding: 20px 40px;
    }
+   .thumbnail{
+     display: none;
+   }
+  .slide{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0px 10%;
+  }
    section.latest-news{
       margin-top:40px;
+   }
+   .featured-events div.PH img,.latest-news div.PH img{
+     padding: 0px 20%;
    }
    .f-event,.l-news{
       display: flex;
@@ -422,6 +446,7 @@ div.instagram-posts{
       border: 1px solid rgba(0,0,0,0.2);
       margin-bottom:15px;
       border-radius:4px;
+      max-width:40%;
    }
    .f-event .date{
       height: 30px;
@@ -459,6 +484,9 @@ div.instagram-posts{
    }
    h3.event-title{
       margin:0;
+      font-size: 18px;
+      padding-bottom: 10px;
+      min-height: 38px;
    }
    h3.event-title.event{
       margin:0;
@@ -466,6 +494,7 @@ div.instagram-posts{
    }
    p.description{
       margin-bottom:0px;
+      margin-top: 10px;
    }
    section.quicklinks{
       display:none;

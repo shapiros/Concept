@@ -2,7 +2,40 @@ body{
     background: #fff;
     margin: 0;
     padding: 0;
-    font-family: "Open Sans"
+    font-family: "Open Sans";
+}
+img{
+  max-width: 100%;
+}
+p{
+  margin: 0;
+}
+*{
+  margin: 0;
+}
+div.PH img{
+  margin: 20px 0px;
+}
+
+.connect-with-us{
+   display: flex;
+   align-items: center;
+   font-weight: 500;
+   color: #094a7e;
+   font-style: italic;
+}
+.free-btn{
+    position: relative;
+}
+.free-btn span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+}
+.free-btn span img{
+  height: 40px;
+  margin: 0;
 }
 .loader{
    height: 100%;
@@ -20,16 +53,15 @@ body{
   font-size: 3rem;
   font-weight: 200;
 }
-.thumbnail{
 
-}
-nav{
+nav.navbar.navbar-default{
    height: 70px;
    width: 100%;
    background: #fff;
    display: flex;
    align-items: center;
    box-shadow: 0px 10px 28.5px 1.5px rgba(0, 0, 0, 0.2);
+   border-radius: 0px;
 }
 a{
    transition: all 0.25s;
@@ -37,7 +69,190 @@ a{
 a.btn:hover,a.btn-large:hover{
    box-shadow: 0px 10px 28.5px 1.5px rgba(0, 0, 0, 0.2);
 }
+/************************
+Staff Directory
+************************/
+section.staff-directory
+{
+  background-color: #f4f4f4;
+  padding-top: 50px;
+}
+section.staff-directory ul.nav-tabs{
+  padding: 10px 150px;
+  padding-bottom: 0px;
+}
+section.staff-directory ul.nav.nav-tabs li a{
+  font-weight: bold;
+  color: #444;
+}
+div.tab-content{
+  background: #fff;
+}
+.teachers{
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px 150px;
+}
+ul li.teachers{
+  padding: 30px 150px;
+}
+.teachers div.teacher{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  width: 25%;
+}
+div.teacher a.img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  color: transparent;
+  background-image: url(../assets/cover_phone.jpg);
+  background-size: cover;
+  background-position: center;
+}
+div.teacher p.name{
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+div.teacher p.subject{
+  font-size: 15px;
+  color: rgba(0,72,128,1);
+  font-weight: bold;
+}
+div.teacher p.description{
+  text-align: center;
+  width: 90%;
+  font-size: 15px;
+}
+div.teacher ul.social-links{
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+   padding-top: 15px;
+}
+div.teacher ul.social-links li{
+   width:30px;
+}
+
+a.slider-nav{
+  position: absolute;
+  font-size: 40px;
+  color: #444;
+}
+a.slider-nav.right{
+  right: 50px;
+  margin-top: -200px;
+}
+a.slider-nav.left{
+  left: 50px;
+  margin-top: -200px;
+}
 @media only screen and (min-width: 1025px) {
+  /************************
+  Quick Link Slider
+  ************************/
+  section.quicklinks{
+    background: #212121;
+    background-size: cover;
+    background-position: center;
+  }
+  section.quicklinks div.contents{
+    background: transparent;
+    min-height: 450px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    padding: 50px 0px;
+  }
+  div.qlinks{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  div.qlinks ul{
+    background: rgba(0,0,0,0);
+  }
+
+  div.qlinks ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    opacity: 1;
+    padding: 0px 150px;
+    transition: opacity 0.55s;
+    margin-top: 170px;
+  }
+  div.qlinks ul li img.ph{
+    height: 150px;
+  }
+  div.qlinks ul li.unslider-active{
+    opacity: 1;
+  }
+  div.qlinks ul li a{
+    display: flex;
+    height: 130px;
+    width: 130px;
+    position: relative;
+    padding: 0px;
+    border: 0px solid rgba(255,255,255,0.5);
+    border-radius: 20%;
+    justify-content: center;
+    align-items: center;
+  }
+  div.qlinks ul li a img{
+    border-radius: 20%;
+    height: 100%;
+    width: auto;
+    opacity: 0.5;
+    transition: all 0.25s;
+  }
+  div.qlinks ul li a:hover{
+    border-color: #fff;
+  }
+  div.qlinks ul li a:hover img{
+    width: auto;
+    opacity: 1;
+  }
+  div.qlinks ul li a span{
+    position: absolute;
+    color: #fff;
+    bottom: -40px;
+    z-index: 999;
+    font-size: 18px;
+    opacity: 0.5;
+    text-align: center;
+  }
+  div.qlinks ul li a:hover span{
+    opacity: 1;
+  }
+  a.qlink-nav{
+    position: absolute;
+    font-size: 40px;
+    color: #fff;
+  }
+  a.qlink-nav.right{
+    right: 50px;
+    margin-top: 170px;
+  }
+  a.qlink-nav.left{
+    left: 50px;
+    margin-top: 170px;
+  }
+
+/************************
+Footer
+************************/
   section.footer{
     background: #212121;
     display: block;
@@ -46,7 +261,7 @@ a.btn:hover,a.btn-large:hover{
   }
   .footer div h2.f-title{
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 30px;
     font-weight: normal;
   }
   .footer div.location{
@@ -85,26 +300,33 @@ a.btn:hover,a.btn-large:hover{
   }
   div.branding>ul>li>a{
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 20px  ;
     padding: 10px;
   }
   .footer>div>p{
-    color:#fff;
-    font-size: 0.95rem;
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
   }
+
   .footer>div>p span{
     color:rgb(254, 182, 38);
     font-weight: bold;
-    padding: 0px 5px 0px 20px;
+    padding: 0px 5px 10px 0px;
+    line-height: 3;
   }
+
   section.footer div h2.f-title>i{
     padding-right: 20px;
   }
+
+/*************
+Social Media
+*************/
   section.social-media{
     display: block;
     padding: 30px 100px;
     background-color: #094A7E;
-    height:300px;
+    height:330px;
   }
   section.social-media div.subscribe-form{
     width: 35%;
@@ -120,7 +342,7 @@ a.btn:hover,a.btn-large:hover{
     box-sizing: border-box;
     border: 0;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 15px;
   }
   input[type=email]:hover,input[type=email]:focus,input[type=submit]:hover,input[type=submit]:focus{
     outline: none;
@@ -130,7 +352,7 @@ a.btn:hover,a.btn-large:hover{
     padding: 15px 60px;
     font-weight: normal;
     color:#000;
-    font-size: 1rem;
+    font-size: 15px;
     border: 0;
     border-radius: 3px;
     font-family: "Open Sans",sans-serif;
@@ -141,7 +363,7 @@ a.btn:hover,a.btn-large:hover{
   }
   form>i{
     position: absolute;
-    top:16px;
+    top:18px;
     left:20px;
   }
    div.recent-tweets{
@@ -153,13 +375,14 @@ a.btn:hover,a.btn-large:hover{
     margin: 30px 0px;
   }
   p.author{
-    font-size: 0.85rem;
+    font-size: 12px;
     font-weight: 600;
     color: #fff;
     margin: 0;
+    padding-bottom: 5px;
   }
   p.post{
-    font-size: 1.0rem;
+    font-size: 15px;
     font-weight: normal;
     color: rgba(255,255,255,0.8);
     margin: 0;
@@ -194,96 +417,16 @@ a.btn:hover,a.btn-large:hover{
   h2.sm-title{
     font-weight: 500;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 20px;
     margin-bottom: 40px;
   }
   h2.sm-title i.fa{
     margin-right: 10px;
   }
-   section.quicklinks{
-      background: url(../assets/quick-link.png);
-      background-size: cover;
-      background-position: center;
-   }
-   section.quicklinks div.contents{
-      background: rgba(0,4,24,0.8);
-      min-height: 450px;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      padding: 20px 150px;
-   }
-   .quicklinks .contents div.links{
-      padding-top: 50px;
-      display: flex;
-      width: 100%;
-      flex-direction: row;
-      justify-content: space-around;
-   }
-   .qlink{
-      width: 154px;
-      height: 154px;
-      margin: 0px;
-      color: transparent;
-      text-align: center;
-   }
-   a.qlink-nav{
-      position: absolute;
-      font-size: 40px;
-      color: #fff;
-   }
-   a.qlink-nav.right{
-      right: 50px;
-      margin-top: 230px;
-   }
-   a.qlink-nav.left{
-      left: 50px;
-      margin-top: 230px;
-   }
-   a.quick-link{
-      background-color: transparent;
-      min-height:150px;
-      min-width:150px;
-      max-width:150px;
-      border-radius: 20%;
-      border: 2px solid #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-decoration: none;
-      font-size: 40px;
-      margin-bottom: 20px;
-   }
-   a.quick-link span{
-      position: absolute;
-      padding-top: 250px;
-      font-size: 20px;
-      opacity: 0.5;
-      color: #fff;
-   }
-   a.quick-link:hover span{
-      opacity: 1;
-      font-weight: 500;
-   }
-   a.quick-link:hover {
-      background-color: rgba(255,255,255,0.9);
-      border-color: rgba(255,255,255,0.9);
-      color: #000;
-   }
-   a.quick-link i.fa{
-      margin: 0px;
-   }
-   a.quick-link span.qlink-title{
-      position: relative;
-      margin-bottom: -50px;
-   }
+
+/*****************************
+  Featured Events & Latest News
+*****************************/
    section.fe-ln{
       padding: 0px 150px;
       display: flex;
@@ -309,6 +452,9 @@ a.btn:hover,a.btn-large:hover{
       align-items: flex-start;
       justify-content: flex-start;
       padding-top: 25px;
+   }
+   .f-event{
+     padding: 25px 0px 20px 0px;
    }
    .f-event .date{
       height: 70px;
@@ -340,13 +486,18 @@ a.btn:hover,a.btn-large:hover{
       margin: 0;
       font-size: 20px;
       font-weight: 500;
+      padding-bottom: 5px;
    }
    .f-event .body p.time-venue,.l-news .body p.time-venue{
       margin: 0;
       margin-top: 5px;
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 500;
       color: rgba(0,0,0,0.5);
+   }
+   p.description{
+     font-size: 15px;
+     margin-top: 10px;
    }
    .l-news .thumbnail{
       height: 100px;
@@ -371,19 +522,14 @@ a.btn:hover,a.btn-large:hover{
       z-index: 100;
       top:15px;
    }
-   .connect-with-us{
-      display: flex;
-      align-items: center;
-      font-weight: 500;
-      color: #094a7e;
-      font-style: italic;
-   }
+
    ul.social-links{
       list-style: none;
       display: flex;
       flex-direction: row;
       padding: 0;
       padding-left: 20px;
+      margin: 0px;
    }
    ul.social-links li{
       width: 60px;
@@ -406,9 +552,12 @@ a.btn:hover,a.btn-large:hover{
    ul li a.social-icon:hover i{
       color:#fff;
    }
+   p.connect-with-us-text{
+     margin: 0px;
+   }
    .sub-container{
       padding: 20px 150px;
-}
+    }
    section.about-school{
       border-bottom: 2px solid rgba(0,0,0,0.1);
       padding-bottom: 50px;
@@ -431,7 +580,7 @@ a.btn:hover,a.btn-large:hover{
       line-height: 2.00;
       font-weight: 400;
       text-align: justify;
-      padding-bottom: 30px;
+      margin-bottom: 30px;
 
    }
    .about-school-container div.video{
@@ -454,6 +603,7 @@ a.btn:hover,a.btn-large:hover{
       width: 100%;
       border-bottom: 2px solid rgba(0,0,0,0.05);
       padding-bottom: 10px;
+      margin-bottom: 30px;
    }
    h2.section-title i{
       margin-right: 20px;
@@ -481,27 +631,44 @@ a.btn:hover,a.btn-large:hover{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      min-height: 600px;
       height: 90vh;
+      max-height: 800px;
       background: url(../assets/cover.jpeg);
       background-size: cover;
    }
    .progress{
-      top:0;
-      height: 90vh;
-      width: 100%;
-      display: none;
-      flex-direction: column;
-      background: url(../assets/progress_back.png);
+      height: 300px;
+      width: 400px;
       background-repeat: no-repeat;
-      background-size: contain;
       position: absolute;
+      left: 60px;
+      top: 100px;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
+      background: transparent;
+      box-shadow: none;
    }
-
+   img.progress-background{
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 600px;
+      height: 90vh;
+      max-height: 800px;
+      width: auto;
+   }
+   .progress-container{
+     height: 100%;
+     position: absolute;
+     left:0;
+     background:t
+   }
    .progress .circular-progress{
       height: 150px;
-      min-width: 150px;
+      width: 150px;
       border-radius: 50%;
       margin-bottom: 20px;
       border: 5px solid rgb(254, 182, 38);
@@ -517,6 +684,7 @@ a.btn:hover,a.btn-large:hover{
    .progress a.btn-large{
       padding: 12px 40px;
       font-size: 15px;
+      margin-top: 40px;
    }
    .progress .progress-msg{
       text-transform: uppercase;
@@ -557,48 +725,9 @@ a.btn:hover,a.btn-large:hover{
      justify-content: center;
      align-items: center;
      text-transform: uppercase;
-     font-weight: bold;
+     font-weight: 500;
      color:#000;
      font-size: 20px;
      text-decoration: none;
    }
-}
-.spinner {
-  width: 70px;
-  text-align: center;
-}
-
-.spinner > div {
-  width: 18px;
-  height: 18px;
-  background-color: #00bcd4;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-}
-
-.spinner .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-
-.spinner .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-}
-
-@-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% { -webkit-transform: scale(0) }
-  40% { -webkit-transform: scale(1.0) }
-}
-
-@keyframes sk-bouncedelay {
-  0%, 80%, 100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  } 40% {
-    -webkit-transform: scale(1.0);
-    transform: scale(1.0);
-  }
 }
