@@ -11,6 +11,186 @@ z-index: 9999;
 .desktop-only{
   display: none;
 }
+/************************
+Quick Link Slider
+************************/
+section.quicklinks{
+  background: #212121;
+  background-size: cover;
+  background-position: center;
+}
+section.quicklinks div.contents{
+  background: transparent;
+  min-height: 340px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  position: relative;
+  padding: 40px 0px;
+}
+div.qlinks{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+div.qlinks ul{
+  background: rgba(0,0,0,0);
+}
+
+div.qlinks ul li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  opacity: 1;
+  padding: 0px 120px;
+  transition: opacity 0.55s;
+  margin-top: 130px;
+}
+div.qlinks ul li img.ph{
+  height: 150px;
+}
+div.qlinks ul li.unslider-active{
+  opacity: 1;
+}
+div.qlinks ul li a{
+  display: flex;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  padding: 0px;
+  border: 0px solid rgba(255,255,255,0.5);
+  border-radius: 20%;
+  justify-content: center;
+  align-items: center;
+}
+div.qlinks ul li a img{
+  border-radius: 20%;
+  height: 100%;
+  width: auto;
+  opacity: 0.5;
+  transition: all 0.25s;
+}
+div.qlinks ul li a:hover{
+  border-color: #fff;
+}
+div.qlinks ul li a:hover img{
+  width: auto;
+  opacity: 1;
+}
+div.qlinks ul li a span{
+  position: absolute;
+  color: #fff;
+  bottom: -40px;
+  z-index: 999;
+  font-size: 18px;
+  opacity: 0.5;
+  text-align: center;
+}
+div.qlinks ul li a:hover span{
+  opacity: 1;
+}
+a.qlink-nav{
+  position: absolute;
+  font-size: 40px;
+  color: #fff;
+}
+a.qlink-nav.right{
+  right: 20px;
+  margin-top: 120px;
+}
+a.qlink-nav.left{
+  left: 20px;
+  margin-top: 120px;
+}
+/************************
+Staff Directory
+************************/
+section.staff-directory
+{
+   background-color: #f4f4f4;
+   padding-top: 50px;
+}
+section.staff-directory ul.nav-tabs{
+   padding: 10px 150px;
+   padding-bottom: 0px;
+}
+section.staff-directory ul.nav.nav-tabs li a{
+   font-weight: bold;
+   color: #444;
+}
+div.tab-content{
+   background: #fff;
+}
+.teachers{
+   background-color: #fff;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 50px 150px;
+}
+ul li.teachers{
+   padding: 30px 80px;
+}
+.teachers div.teacher{
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   align-items: center;
+}
+div.teacher a.img{
+   height: 100px;
+   width: 100px;
+   border-radius: 50%;
+   color: transparent;
+   background-image: url(../assets/cover_phone.jpg);
+   background-size: cover;
+   background-position: center;
+}
+div.teacher p.name{
+   font-size: 17px;
+   font-weight: bold;
+   text-transform: uppercase;
+   margin-top: 10px;
+}
+div.teacher p.subject{
+   font-size: 15px;
+   color: rgba(0,72,128,1);
+   font-weight: bold;
+}
+div.teacher p.description{
+   text-align: center;
+   width: 90%;
+   font-size: 15px;
+}
+div.teacher ul.social-links{
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+   padding-top: 15px;
+}
+div.teacher ul.social-links li{
+   width:30px;
+}
+a.slider-nav{
+   position: absolute;
+   font-size: 30px;
+   color: #444;
+}
+a.slider-nav.right{
+   right: 30px;
+   margin-top: -200px;
+}
+a.slider-nav.left{
+   left: 30px;
+   margin-top: -200px;
+}
+/**************************
+Cover
+**************************/
 .cover{
    height:70vh;
    background: url(../assets/cover.jpeg);
@@ -495,8 +675,5 @@ Featured Events & Latest News
    p.description{
       margin-bottom:0px;
       margin-top: 10px;
-   }
-   section.quicklinks{
-      display:none;
    }
 }

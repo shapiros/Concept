@@ -331,7 +331,6 @@ PageBuilder.prototype.getTeacher = function (object,pod){
   var index = 0,code ="",j=1;
   var posts = teachers.length;
   //console.log(teachers);
-  if($(document).width()<=700)pod=1;
   while(index<posts){
     var i=pod;
     code += "<li class=\"teachers\">";
@@ -365,8 +364,8 @@ PageBuilder.prototype.handleStaffBlock = function (block,pod) {
     var subject = block.items;
     var index = 0,code="",code1="",j=1;
     var temp = "active"
+    console.log(pod);
     var posts = subject.length;
-    if($(document).width()<=700)pod=1;
     while(index<posts){
       //code += "<li><a data-toggle=\"tab\" href=\"#"+subject[index].title+"\">"+subject[index].title+"</a></li>";
       code += "<li><a data-toggle=\"tab\" href=\"#"+subject[index].title+"\">"+subject[index].title+"</a></li>";
