@@ -6,14 +6,118 @@ background: #fff;
 display: flex;
 align-items: center;
 }
+.desktop-only{
+  display: none;
+}
+/************************
+Quick Link Slider
+************************/
+section.quicklinks{
+  background: #212121;
+  background-size: cover;
+  background-position: center;
+  height:400px;
+}
+section.quicklinks div.contents{
+  background: transparent;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  position: relative;
+  padding: 50px 0px;
+}
+div.qlinks{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+div.qlinks ul{
+  background: rgba(0,0,0,0);
+}
+
+div.qlinks ul li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  opacity: 1;
+  padding: 0px 40px;
+  transition: opacity 0.55s;
+  margin-top: 170px;
+}
+div.qlinks ul li img.ph{
+  height: 150px;
+}
+div.qlinks ul li.unslider-active{
+  opacity: 1;
+}
+div.qlinks ul li a{
+  display: flex;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  padding: 0px;
+  border: 0px solid rgba(255,255,255,0.5);
+  border-radius: 20%;
+  justify-content: center;
+  align-items: center;
+}
+div.qlinks ul li a img{
+  border-radius: 20%;
+  height: 100%;
+  width: auto;
+  opacity: 0.5;
+  transition: all 0.25s;
+}
+div.qlinks ul li a:hover{
+  border-color: #fff;
+}
+div.qlinks ul li a:hover img{
+  width: auto;
+  opacity: 1;
+}
+div.qlinks ul li a span{
+  position: absolute;
+  color: #fff;
+  bottom: -40px;
+  z-index: 999;
+  font-size: 18px;
+  opacity: 0.5;
+  text-align: center;
+}
+div.qlinks ul li a:hover span{
+  opacity: 1;
+}
+a.qlink-nav{
+  position: absolute;
+  font-size: 40px;
+  color: #fff;
+}
+a.qlink-nav.right{
+  right: 30px;
+  margin-top: 170px;
+}
+a.qlink-nav.left{
+  left: 30px;
+  margin-top: 170px;
+}
+
 .cover{
    height:115vh;
+   min-height: 700px;
    background: url(../assets/cover_phone.jpg);
    background-size:cover;
    background-position:center;
    display:flex;
    flex-direction:column;
    justify-content:space-between;
+   position: relative;
+}
+.thumbnail{
+  display: none;
 }
 .nav-wrapper{
    padding: 0px 20px;
@@ -41,6 +145,7 @@ ul.social-links{
    flex-direction: row;
    padding: 0;
    padding-left: 15px;
+   margin: 0;
 }
 ul.social-links li{
    width: 40px;
@@ -56,6 +161,7 @@ ul li a.social-icon{
    text-decoration: none;
    font-size: 10px;
 }
+
 /****************Footer*************************/
 section.footer{
   background: #212121;
@@ -254,7 +360,7 @@ div.instagram-posts{
 .progress{
    display:flex;
    background: rgba(0,72,128,0.8);
-   bottom:25px;
+   bottom:110px;
    height: 220px;
    width:60%;
    margin:0px 20%;
@@ -299,8 +405,8 @@ div.instagram-posts{
 }
 
 .subscribe{
-   padding-bottom:25px;
-   height: 149px;
+   padding-bottom:20px;
+   height: 160px;
    display: flex;
    flex-direction:column;
    background: #3b4b64;
@@ -313,7 +419,10 @@ div.instagram-posts{
    font-weight:bold;
    color:#fff;
    font-style:italic;
-   font-size:13px
+   font-size:15px;
+   padding: 5px;
+   position: absolute;
+   bottom: 70px;
 }
 /*********About School Container**********/
    .sub-container{
@@ -363,7 +472,7 @@ div.instagram-posts{
       text-transform: uppercase;
       color: #094a7e;
       font-weight: 800;
-      font-size: 20px;
+      font-size: 25px;
       width: 100%;
       text-align: center;
       padding-bottom: 20px;
@@ -462,8 +571,5 @@ div.instagram-posts{
    }
    p.description{
       margin-bottom:0px;
-   }
-   section.quicklinks{
-      display:none;
    }
 }
