@@ -76,7 +76,7 @@ ul li a.social-icon:hover i{
 section.footer{
   background: #212121;
   display: block;
-  height: 350px;
+  height: 410px;
   padding: 30px 60px;
 }
 .footer div h2.f-title{
@@ -319,7 +319,7 @@ div.instagram-posts{
    font-size:15px
 }
 /*********About School Container**********/
-   .container{
+   .sub-container{
       padding: 20px 40px;
    }
    section.about-school{

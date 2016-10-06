@@ -1,205 +1,92 @@
-var id = "dba3511f-32ef-486f-ade2-7540ae28922e";
-var school = {
-    "dba3511f-32ef-486f-ade2-7540ae28922e": {
-        "id": "dba3511f-32ef-486f-ade2-7540ae28922e",
-        "parent_id": "root",
-        "user_id": "root",
-        "title": "Ross Montessori School",
-        "created": "2015-02-11 06:44:28.098659+00",
-        "modified": "2016-08-15 22:52:10.147496+00",
-        "type": "school",
-        "is_private": false,
-        "deleted": false,
-        "path": "root.dba3511f32ef486fade27540ae28922e",
-        "is_live": true,
-        "url_path": null,
-        "category_ids": "{2}",
-        "locations": [
-            {
-                "id": 1191,
-                "address": "407 MERRILL AVE",
-                "address2": null,
-                "city": "CARBONDALE",
-                "state": "CO",
-                "zip": 23200,
-                "zip4": null,
-                "coordinates": "(39.404388,-107.211195)",
-                "phone": 9709637198,
-                "is_primary": true,
-                "sponsor_id": null,
-                "organization_id": "dba3511f-32ef-486f-ade2-7540ae28922e",
-                "fax": null
-            }
-        ],
-        "thirdPartyLinks": [
-            {
-                "id": 1,
-                "type": "url",
-                "value": "http://www.rossmontessori.org"
-            },
-            {
-                "id": 2,
-                "type": "facebook.url",
-                "value": "https://www.facebook.com/#!/pages/Ross-Montessori-Charter-School/123178844400497"
-            },
-            {
-                "id": 3,
-                "type": "twitter.url",
-                "value": "https://twitter.com/RossMontessori"
-            }
-        ],
-        "blocks": [
-            {
-                "id": 1,
-                "type": "message",
-                "items": [
-                    {
-                        "title": "About Ross Montessori",
-                        "message": "The mission of Ross Montessori School is to prepare compassionate life-long learners to have a positive impact on the world.We envision a time when Ross Montessori School will be an exemplary educational institution and recognized as such all over the world. Educators from all backgrounds will observe and learn from our model, grounded in the Montessori Method. Parents will choose our school over any other with a steadfast belief in the value we create for the children, families and communities we serve.",
-                        "url": "http://www.rossmontessori.org",
-                        "image": null,
-                        "displayTextUnderImage": null
-                    }
-                ]
-            },
-            {
-                "id": 2,
-                "type": "video",
-                "title": "SchoolBlocks Intro",
-                "url": "https://youtu.be/xdl0UWk-1FQ",
-                "embedUrl": "https://youtu.be/xdl0UWk-1FQ?modestbranding=1&showinfo=0&rel=0"
-            },
-            {
-                "id": 3,
-                "type": "eventlist",
-                "title": "Featured Events",
-                "url": "http://www.rossmontessori.org/calendar/f3eb4194-d7df-4f3a-8e8d-5b32e77022ea",
-                "items": [
-                    {
-                        "title": "Beginning of the Year Party",
-                        "description": "Come join us at the <em>Beginning of the Year Party!</em>",
-                        "url": null,
-                        "attachments": false,
-                        "location": "RMS, 109 Lewies Lane, Carbondale, CO 81623",
-                        "allDay": false,
-                        "multiDay": false,
-                        "timezone": "America/Denver",
-                        "start": "2016-10-21 09:30:00",
-                        "end": "2016-10-21 10:30:00"
-                    },
-                    {
-                        "title": "Thanksgiving",
-                        "description": null,
-                        "url": null,
-                        "attachments": false,
-                        "location": "RMS, 109 Lewies Lane, Carbondale, CO 81623",
-                        "allDay": true,
-                        "multiDay": false,
-                        "timezone": "America/Denver",
-                        "start": "2016-11-24 00:00:00",
-                        "end": "2016-11-24 00:00:00"
-                    },
-                    {
-                        "title": "Winter Break",
-                        "description": "We have a couple of weeks off.  Yippee!",
-                        "url": "https://www.nps.gov/index.htm",
-                        "attachments": false,
-                        "location": "RMS, 109 Lewies Lane, Carbondale, CO 81623",
-                        "allDay": true,
-                        "multiDay": true,
-                        "timezone": "America/Denver",
-                        "start": "2016-12-20 00:00:00",
-                        "end": "2017-01-04 00:00:00"
-                    },
-                    {
-                        "title": "Christmas",
-                        "description": null,
-                        "url": null,
-                        "attachments": false,
-                        "location": null,
-                        "allDay": true,
-                        "multiDay": false,
-                        "timezone": "America/Denver",
-                        "start": "2016-12-25 00:00:00",
-                        "end": "2016-12-25 00:00:00"
-                    }
-                ]
-            },
-            {
-                "id": 4,
-                "type": "newsstream",
-                "items": [
-                    {
-                        "title": "Ross Kids are the Smartest!",
-                        "description": "This great website shows how Ross kids are the smartest.",
-                        "url": "http://www.rossmontessori.org",
-                        "image": "https://scontent.fsnc1-1.fna.fbcdn.net/t31.0-8/14310317_1281527738565596_6564701507888292348_o.jpg",
-                        "timezone": "America/Denver",
-                        "timestamp": "2016-09-11 09:30:32"
-                    },
-                    {
-                        "title": "The Middle School is off for their camping trip. Have a great time everyone!",
-                        "description": null,
-                        "url": "https://www.facebook.com/rossmontessori/photos/a.204351582949889.65495.123178844400497/1285843474800689/?type=3&theater",
-                        "image": "https://scontent.fsnc1-1.fna.fbcdn.net/t31.0-8/14324283_1285843474800689_6177427745886358701_o.jpg",
-                        "timezone": "America/Denver",
-                        "timestamp": "2016-09-04 09:30:32"
-                    },
-                    {
-                        "title": "Montessori Education & My Child",
-                        "description": null,
-                        "url": "http://amshq.org/Family-Resources/Montessori-Education-and-Your-Child",
-                        "image": null,
-                        "timezone": "America/Denver",
-                        "timestamp":  "2016-09-01 14:10:00"
-                    }
-                ]
-            },
-            {
-                "id": 5,
-                "type": "quicklink",
-                "items": [
-                    {
-                        "title": "Pancakes",
-                        "url": "http://www.google.com",
-                        "image": "https://parakeetweb.s3.amazonaws.com/images/stickers/Stickers/Pancakes.png"
-                    },
-                    {
-                        "title": "Waffles",
-                        "url": "http://www.bing.com",
-                        "image": "https://parakeetweb.s3.amazonaws.com/images/stickers/Stickers/Waffles.png"
-                    },
-                    {
-                        "title": "BLT Sandwich",
-                        "url": "http://www.duckduckgo.com",
-                        "image": "https://parakeetweb.s3.amazonaws.com/images/stickers/Stickers/BLT%20Sandwich.png"
-                    }
-                ]
-            }
-        ]
+SchoolBlocksApp.bundles.pageBuilder = true;
+
+function PageBuilder(organizationData) {
+    "use strict";
+    var pb = this,
+        no_of_posts = 2,
+        browserWidth = $(document).width();
+
+    pb.organizationData = organizationData;
+    pb.blocks = pb.organizationData.blocks;
+    pb.thirdPartyLinks = pb.organizationData.thirdPartyLinks;
+
+    if(browserWidth > 1024){
+        no_of_posts = 3;
+    } else if(browserWidth <= 700){
+        no_of_posts = 1;
+    }
+
+    pb.blocks.forEach(function (block) {
+        switch(block.type) {
+            case "video":
+                pb.handleVideoBlock(block);
+                break;
+
+            case "message":
+                pb.handleMessageBlock(block);
+                break;
+
+            case "eventlist":
+                pb.handleEventListBlock(block, no_of_posts);
+                break;
+
+            case "newsstream":
+                pb.handleNewsStreamBlock(block, no_of_posts);
+                break;
+        }
+    });
+
+    pb.getSocialLinks();
+    pb.getLocation();
+    pb.mapLocation();
+    $(".slide").hide();
+    $("#news-slide-1").show();
+    $("#event-slide-1").show();
+}
+
+PageBuilder.prototype.handleVideoBlock = function (block) {
+    "use strict";
+    var pb = this,
+        $blockWell = $('.sb-data-block.video'),
+        $html = $('<iframe></iframe>');
+
+    if(block.embedUrl !== "") {
+        $html.attr("src", block.embedUrl);
+        $html.attr("frameborder", "0");
+        $html.attr("allowfullscreen", "true");
+        $blockWell.html($html);
     }
 };
-var blocks = school[id].blocks;
-function getSocialLinks(){
-   var facebook = school[id].thirdPartyLinks[1];
-   var twitter = school[id].thirdPartyLinks[2];
-   $("#facebook-link").attr('href',facebook.value);
-   $("#twitter-link").attr('href',twitter.value);
-   $("#school-name").html(school[id].title);
-}
-function getAboutData(){
-   var msg = blocks[0].items[0].message;
-   var title = blocks[0].items[0].title;
+
+PageBuilder.prototype.getSocialLinks = function () {
+    "use strict";
+    var pb = this;
+
+   var facebook = pb.thirdPartyLinks[1];
+   var twitter = pb.thirdPartyLinks[2];
+   $("a.facebook-link").attr('href',facebook.value);
+   $("a.twitter-link").attr('href',twitter.value);
+   $("#school-name").html(pb.organizationData.title);
+};
+
+PageBuilder.prototype.handleMessageBlock = function (block) {
+    "use strict";
+    var pb = this;
+   var msg = block.items[0].message;
+   var title = block.items[0].title;
    $("#abt-text").html(msg.substring(0,400)+"...");
    $("#abt-title").html("<span class=\"text\">"+title.substring(0,title.indexOf(" "))+"</span>"+title.substring(title.indexOf(" ")));
-   $(".text a.btn-large").attr('href',blocks[0].items[0].url)
-}
-function getEventHTML(object,index){
+   $(".text a.btn-large").attr('href',block.items[0].url);
+};
+
+PageBuilder.prototype.getEventHTML = function (object, index) {
+    "use strict";
+    var pb = this;
    var code = "";
    //Event Code Start
    code += "<div id=\"event-"+(index+1)+"\" class=\"f-event\">";
       if(object[index].start!=null){
-         code += "<div class=\"date\"><p class=\"month\">"+getMonth(object[index].start)+"</p>";
+         code += "<div class=\"date\"><p class=\"month\">"+pb.getMonth(object[index].start)+"</p>";
          code += "<p class=\"_date\">"+object[index].start.substring(8,10)+"</p></div>";
       }
       else{
@@ -238,8 +125,11 @@ function getEventHTML(object,index){
    code += "</div></div>";
    //Event Code End
    return code;
-}
-function getMonth(start){
+};
+
+PageBuilder.prototype.getMonth = function (start) {
+    "use strict";
+    var pb = this;
    var month = "";
    var date = start.substring(5,7);
    switch(date){
@@ -257,16 +147,19 @@ function getMonth(start){
       case "12": month = "DEC";break;
    }
    return month;
-}
-function getFeaturedEvents(pod){
-   var feEvents = school[id].blocks[2].items;
+};
+
+PageBuilder.prototype.handleEventListBlock = function (block, pod) {
+    "use strict";
+    var pb = this;
+   var feEvents = block.items;
    var index = 0,code ="",j=1;
    var posts = feEvents.length;
    while(index<posts){
      var i=pod;
      code += "<div id=\"event-slide-"+j+"\"class=\"slide\">";
      while(i--) {
-       code += getEventHTML(feEvents,index++);
+       code += pb.getEventHTML(feEvents,index++);
        if(index==posts)break;
      }
      code+="</div>";
@@ -277,8 +170,11 @@ function getFeaturedEvents(pod){
    //code+=getEventHTML(feEvents,index++);
    //});
    $(".featured-events").append(code);
-}
-function getNewsMonth(start){
+};
+
+PageBuilder.prototype.getNewsMonth = function (start) {
+    "use strict";
+    var pb = this;
    var month = "";
    var date = start.substring(5,7);
    switch(date){
@@ -296,8 +192,11 @@ function getNewsMonth(start){
       case "12": month = "December";break;
    }
    return month;
-}
-function getNewsHTML(object,index){
+};
+
+PageBuilder.prototype.getNewsHTML = function (object, index) {
+    "use strict";
+    var pb = this;
    var code = "";
    //Event Code Start
    code += "<div id=\"news-"+(index+1)+"\" class=\"l-news\">";
@@ -316,7 +215,7 @@ function getNewsHTML(object,index){
       }
       if(object[index].timestamp!=null){
       code += "<p class=\"time-venue\">"//2016-10-21 09:30:00
-      code += getNewsMonth(object[index].timestamp)+", "+object[index].timestamp.substring(0,4);
+      code += pb.getNewsMonth(object[index].timestamp)+", "+object[index].timestamp.substring(0,4);
       code += "</p>";
       }
       if(object[index].description!=null){
@@ -328,16 +227,19 @@ function getNewsHTML(object,index){
       code += "</div></div>";
    //Event Code End
    return code;
-}
-function getLatestNews(pod){
-   var news = school[id].blocks[3].items;
+};
+
+PageBuilder.prototype.handleNewsStreamBlock = function (block, pod) {
+    "use strict";
+    var pb = this;
+   var news = block.items;
    var index = 0,code ="",j=1;
    var posts = news.length;
    while(index<posts){
      var i=pod;
      code += "<div id=\"news-slide-"+j+"\"class=\"slide\">";
      while(i--) {
-       code += getNewsHTML(news,index++);
+       code += pb.getNewsHTML(news,index++);
        if(index==posts)break;
      }
      code+="</div>";
@@ -348,13 +250,19 @@ function getLatestNews(pod){
    //    code+=getNewsHTML(news,index++,pod);
    //});
    $(".latest-news").append(code);
-}
-function getNumberOfSlides(object,postsToDisplay){
+};
+
+PageBuilder.prototype.getNumberOfSlides = function (object, postsToDisplay) {
+    "use strict";
+    var pb = this;
   var i,posts = object.length;
   return parseInt(posts/postsToDisplay);
-}
-function getLocation(){
-  var location = school[id].locations[0];
+};
+
+PageBuilder.prototype.getLocation = function () {
+    "use strict";
+    var pb = this;
+  var location = pb.organizationData.locations[0];
   //var lat = parseFloat(location.coordinates.substring(1,location.coordinates.indexOf(",")));
   //var long = parseFloat(location.coordinates.substring(location.coordinates.indexOf(",")+1,location.coordinates.indexOf(")")));
   //console.log(lat+""+long);
@@ -366,12 +274,14 @@ function getLocation(){
     if(location.phone!=null){
      code += "<p class=\"address\"><i class=\"fa fa-phone\"></i><span>Phone: </span>"+location.phone+"</p>";
     }
-    mapLocation();
+    pb.mapLocation();
     $("#mylocation").append(code);
-}
+};
 
-function mapLocation() {
-  var coordinates = school[id].locations[0].coordinates;
+PageBuilder.prototype.mapLocation = function () {
+    "use strict";
+    var pb = this;
+  var coordinates = pb.organizationData.locations[0].coordinates;
   var lat = parseFloat(coordinates.substring(1,coordinates.indexOf(",")));
   var long = parseFloat(coordinates.substring(coordinates.indexOf(",")+1,coordinates.indexOf(")")));
   var mapOptions = {
@@ -382,25 +292,4 @@ function mapLocation() {
   var map = new google.maps.Map(document.getElementById("map"), mapOptions);
   var marker = new google.maps.Marker({position:mapOptions.center});
   marker.setMap(map);
-}
-
-$(document).ready( function(){
-   $(".loader").delay(1000).fadeOut();
-   getSocialLinks();
-   getAboutData();
-   var no_of_posts;
-   if($(document).width()>1024){
-     no_of_posts = 3;
-   }else if($(document).width()<=700){
-     no_of_posts = 1;
-   }else{
-     no_of_posts = 2;
-   }
-   getFeaturedEvents(no_of_posts);
-   getLatestNews(no_of_posts);
-   getLocation();
-   mapLocation();
-   $(".slide").hide();
-   $("#news-slide-1").show();
-   $("#event-slide-1").show();
-});
+};
