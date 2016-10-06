@@ -10,6 +10,78 @@ align-items: center;
   display: none;
 }
 /************************
+Staff Directory
+************************/
+section.staff-directory
+{
+  background-color: #f4f4f4;
+  padding-top: 50px;
+}
+section.staff-directory ul.nav-tabs{
+  padding: 10px 150px;
+  padding-bottom: 0px;
+  display: none;
+}
+section.staff-directory ul.nav.nav-tabs li a{
+  font-weight: bold;
+  color: #444;
+}
+.teachers{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 50px 150px;
+}
+ul li.teachers{
+  padding: 30px 30px 100px 30px;
+}
+.teachers div.teacher{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  padding: 0px 5%;
+}
+div.teacher a.img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  color: transparent;
+  background-image: url(../assets/cover_phone.jpg);
+  background-size: cover;
+  background-position: center;
+}
+div.teacher p.name{
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+div.teacher p.subject{
+  font-size: 15px;
+  color: rgba(0,72,128,1);
+  font-weight: bold;
+}
+div.teacher p.description{
+  display: none;
+}
+div.teacher ul.social-links{
+   display: none;
+}
+a.slider-nav{
+  position: absolute;
+  font-size: 30px;
+  color: #444;
+}
+a.slider-nav.right{
+  right: 20px;
+  margin-top: -200px;
+}
+a.slider-nav.left{
+  left: 20px;
+  margin-top: -200px;
+}
+/************************
 Quick Link Slider
 ************************/
 section.quicklinks{
@@ -37,7 +109,6 @@ div.qlinks{
 div.qlinks ul{
   background: rgba(0,0,0,0);
 }
-
 div.qlinks ul li{
   display: flex;
   justify-content: center;
@@ -93,18 +164,20 @@ div.qlinks ul li a:hover span{
 }
 a.qlink-nav{
   position: absolute;
-  font-size: 40px;
+  font-size: 30px;
   color: #fff;
 }
 a.qlink-nav.right{
   right: 30px;
-  margin-top: 170px;
+  margin-top: 140px;
 }
 a.qlink-nav.left{
   left: 30px;
-  margin-top: 170px;
+  margin-top: 140px;
 }
-
+/*****************************
+Cover
+*****************************/
 .cover{
    height:115vh;
    min-height: 700px;
@@ -162,23 +235,35 @@ ul li a.social-icon{
    font-size: 10px;
 }
 
-/****************Footer*************************/
+/****************
+Footer
+****************/
 section.footer{
   background: #212121;
   display: block;
-  height: 410px;
+  height: 510px;
   padding: 30px 60px;
   position: relative;
   padding-top: 200px;
 }
 .footer div h2.f-title{
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 20px;
   font-weight: normal;
+  text-align: center;
 }
 .footer div.location{
   width: 100%;
   display: inline-block;
+  padding-top: 25px;
+}
+.footer div.location p.address{
+   margin: 20px 0px;
+   text-align: center;
+}
+.footer div.location p.address span{
+   padding: 0;
+   margin: 0;
 }
 .footer div.map{
   width: 100%;
@@ -221,7 +306,6 @@ div.branding>ul>li>a{
   color: #fff;
   font-size: 1.5rem;
   padding: 10px;
-
 }
 .footer>div>p{
   color:#fff;
@@ -235,22 +319,23 @@ div.branding>ul>li>a{
 section.footer div h2.f-title>i{
   padding-right: 20px;
 }
-
-/****************Social Media*******************/
+/****************
+Social Media
+****************/
 section.social-media{
   display: flex;
   flex-direction: column-reverse;
   padding: 30px 60px;
   background-color: #094A7E;
-  height: 500px;
+  height: 560px;
   position: relative;
   padding-top: 130px;
 }
 h2.sm-title{
   font-weight: bold;
   color: #fff;
-  font-size: 1rem;
-  margin-bottom: 40px;
+  font-size: 15px;
+  margin-bottom: 20px;
 }
 h2.sm-title i.fa{
   margin-right: 10px;
@@ -270,8 +355,7 @@ section.social-media div.subscribe-form{
 div.subscribe-form h2.sm-title{
   text-align: center;
   color: #444;
-  padding: 0px 10px;
-  padding-top: 10px;
+  padding: 20px 0px 30px 0px;
 }
 div.form{
   position: relative;
@@ -285,9 +369,9 @@ input[type=email] {
   width: 80%;
   left: 10%;
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 13px;
   border: 1px solid rgba(0,0,0,0.1);
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 }
 input[type=email]:hover,input[type=email]:focus,input[type=submit]:hover,input[type=submit]:focus{
   outline: none;
@@ -297,7 +381,8 @@ input[type=submit]{
   padding: 13px;
   font-weight: normal;
   color:#000;
-  font-size: 1rem;
+  font-size: 15px;
+  font-weight: 600;
   border: 0;
   border-radius: 0px;
   font-family: "Open Sans",sans-serif;
@@ -312,7 +397,7 @@ input[type=submit]:hover{
 }
 form>i{
   position: absolute;
-  top:11px;
+  top:15px;
   left:14%;
 }
 div.recent-tweets{
@@ -323,13 +408,13 @@ div.recent-tweets{
   margin: 20px 0px;
 }
 p.author{
-  font-size: 0.85rem;
+  font-size: 12px;
   font-weight: bold;
   color: #fff;
   margin: 0;
 }
 p.post{
-  font-size: 1.0rem;
+  font-size: 14px;
   font-weight: normal;
   color: rgba(255,255,255,0.8);
   margin: 0;
@@ -337,6 +422,7 @@ p.post{
 div.instagram-posts{
   width: 100%;
   display: block;
+  margin-top: 20px;
 }
 
 .posts div.i-post{
@@ -424,7 +510,9 @@ div.instagram-posts{
    position: absolute;
    bottom: 70px;
 }
-/*********About School Container**********/
+/*****************************
+About School Container
+*****************************/
    .sub-container{
       padding: 20px 40px;
    }
@@ -446,8 +534,7 @@ div.instagram-posts{
       line-height: 1.8;
       font-size: 16px;
       font-weight: 400;
-      text-align: center;
-      padding-bottom: 20px;
+      padding:20px 0px;
       text-align:justify;
    }
 
@@ -511,8 +598,8 @@ div.instagram-posts{
 
    section.fe-ln{
       background:#f8f8f8;
-      padding: 20px 40px;
-      padding-bottom: 140px;
+      padding: 40px;
+      padding-bottom: 60px;
    }
    section.latest-news{
       margin-top:40px;
@@ -559,17 +646,23 @@ div.instagram-posts{
    }
    .f-event .body p.time-venue,.l-news .body p.time-venue{
       font-size: 15px;
-      font-weight: 500;
-      color: rgba(0,0,0,0.5);
+      font-weight: 600;
+      color: rgba(0,0,0,0.4);
+      padding-top: 5px;
+   }
+   .f-event .body p.time-venue{
+      margin-top: 20px;
    }
    h3.event-title{
       margin:0;
+      font-size: 18px;
+      font-weight: 600;
    }
    h3.event-title.event{
-      margin:0;
-      margin-left:42px;
+      margin:5px 0px 0px 42px;
    }
    p.description{
       margin-bottom:0px;
+      margin-top: 10px;
    }
 }
