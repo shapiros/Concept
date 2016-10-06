@@ -41,7 +41,7 @@ a.btn:hover,a.btn-large:hover{
   section.footer{
     background: #212121;
     display: block;
-    height: 250px;
+    height: 310px;
     padding: 30px 140px;
   }
   .footer div h2.f-title{
@@ -406,7 +406,7 @@ a.btn:hover,a.btn-large:hover{
    ul li a.social-icon:hover i{
       color:#fff;
    }
-   .container{
+   .sub-container{
       padding: 20px 150px;
 }
    section.about-school{

@@ -60,7 +60,7 @@ ul li a.social-icon{
 section.footer{
   background: #212121;
   display: block;
-  height: 350px;
+  height: 410px;
   padding: 30px 60px;
   position: relative;
   padding-top: 200px;
@@ -316,7 +316,7 @@ div.instagram-posts{
    font-size:13px
 }
 /*********About School Container**********/
-   .container{
+   .sub-container{
       padding: 20px 40px;
    }
    section.about-school{

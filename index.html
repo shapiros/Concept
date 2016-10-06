@@ -4,14 +4,14 @@
    <meta charset="utf-8">
    <title id="school-name">Boston School</title>
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!--<link rel="stylesheet" href="css/normalize.css">-->
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="https://d6vze32yv269z.cloudfront.net/assets/2.2/config/../assets/dist/css/SchoolBlocksApp.bundles.vendor.css" />
+    <link rel="stylesheet" type="text/css" href="https://d6vze32yv269z.cloudfront.net/assets/2.2/config/../assets/dist/css/SchoolBlocksApp.bundles.app.css" />
+    <link rel="stylesheet" type="text/css" href="https://d6vze32yv269z.cloudfront.net/assets/2.2/config/../assets/dist/css/SchoolBlocksApp.bundles.blocks.css" />
+    <link rel="stylesheet" type="text/css" href="https://d6vze32yv269z.cloudfront.net/assets/2.2/assets/dist/bower_components/contentbuilderjs/assets/default/content.css" />
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/style-mobile.css">
    <link rel="stylesheet" href="css/style-tablet.css">
-   <link type="text/css" rel="stylesheet" href="css/lightslider.css" />
-   <link rel="stylesheet" href="css/font-awesome.min.css">
    <script type="application/javascript">
 
      /* fallback.js v1.1.7 | http://fallback.io/ | Salvatore Garbesi <sal@dolox.com> | (c) 2015 Dolox, Inc. */
@@ -35,8 +35,8 @@
          SchoolBlocksApp.mapReady = function(callback) {
              if (SchoolBlocksApp.mapLoaded === true) {
                  callback();
-                 SchoolBlocksApp.mapCallbacks.push(callback);
              } else {
+                 SchoolBlocksApp.mapCallbacks.push(callback);
              }
          };
 
@@ -70,26 +70,32 @@
      }(window, document));
 
      fallback.load({
+         "jQuery": "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
+         "jQuery.ui": "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js",
          "SchoolBlocksApp.bundles.vendor":"https://d6vze32yv269z.cloudfront.net/assets/2.2/assets/dist/js/SchoolBlocksApp.bundles.vendor.js",
-         "SchoolBlocksApp.bundles.app":"ApiExample.js"
+         "SchoolBlocksApp.bundles.app":"ApiExample.js",
+         "SchoolBlocksApp.bundles.pageBuilder":"js/script.js"
      }, {
          "shim": {
              "jQuery.ui": ["jQuery"],
              "SchoolBlocksApp.bundles.vendor": ["jQuery","jQuery.ui"],
-             "SchoolBlocksApp.bundles.app":["SchoolBlocksApp.bundles.vendor"]
+             "SchoolBlocksApp.bundles.app":["SchoolBlocksApp.bundles.vendor"],
+             "SchoolBlocksApp.bundles.pageBuilder":["SchoolBlocksApp.bundles.vendor"]
          }
      });
 
      SchoolBlocksApp.ready(function () {
          var api = new SchoolBlocksApp.Api();
+         fallback.load("js/script.js");
+         fallback.load("js/lightslider.js");
 
          api.viewOrganization('dba3511f-32ef-486f-ade2-7540ae28922e', null, null,
              ['locations', 'thirdPartyLinks', 'blocks'])
                  .done(function (response) {
-                     console.log(response);
+                     var pb = new PageBuilder(response);
                  });
 
-     });
+     }, ["SchoolBlocksApp.bundles.app", "SchoolBlocksApp.bundles.pageBuilder"]);
 
 
    </script>
@@ -101,14 +107,6 @@
    <![endif]-->
   </head>
 <body>
-<div class="loader">
-    <p id="school-name">Hi.</p>
-   <div class="spinner">
-     <div class="bounce1"></div>
-     <div class="bounce2"></div>
-     <div class="bounce3"></div>
-   </div>
-</div>
    <section class="cover">
       <nav class="navbar navbar-default">
          <div class="nav-wrapper">
@@ -116,8 +114,8 @@
             <div class="connect-with-us">
                <p  class="connect-with-us-text" tyle="color:#0d5186;font-weight:bold;font-style:italic">Connect with us:</p>
                <ul class="social-links">
-                  <li><a id="twitter-link" class="social-icon" style="color:#43bfff" href="#"><i class="fa fa-twitter "></i></a></li>
-                  <li><a id="facebook-link" class="social-icon" style="color:#094d80" href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a class="twitter-link social-icon" style="color:#43bfff" href="#"><i class="fa fa-twitter "></i></a></li>
+                  <li><a class="facebook-link social-icon" style="color:#094d80" href="#"><i class="fa fa-facebook"></i></a></li>
                   <li><a id="linkedin" class="social-icon" style="color:#1f86d5" href="#"><i class="fa fa-linkedin"></i></a></li>
                   <li><a id="instagram" class="social-icon" style="color:#4176b3" href="#"><i class="fa fa-instagram"></i></a></li>
                </ul>
@@ -141,15 +139,18 @@
       </div>
    </section>
    <section class="about-school">
-      <div class="container">
+      <div class="sub-container">
          <h2 id="abt-title" class="section-title"><span class="text">About </span>Your School</h2>
          <div class="about-school-container">
          <div class="text">
-            <p id="abt-text"></p>
+            <p id="abt-text">
+                <img src="assets/placeholder-about-text.png" />
+            </p>
             <a class="btn-large">Learn More</a>
          </div>
-         <div class="video">
-            <iframe src="https://www.youtube.com/embed/xdl0UWk-1FQ" frameborder="0" allowfullscreen></iframe>
+         <div class="sb-data-block video">
+             <img src="assets/placeholder-video.png" />
+
          </div>
          </div>
       </div>
@@ -240,16 +241,13 @@
      <div class="branding">
       <a class="logo"><img src="assets/Logo.png"/></a><br />
       <ul class="social-links">
-         <li><a id="twitter-link" style="padding-left:0" href="#"><i class="fa fa-twitter "></i></a></li>
-         <li><a id="facebook-link" href="#"><i class="fa fa-facebook"></i></a></li>
+         <li><a class="twitter-link" style="padding-left:0" href="#"><i class="fa fa-twitter "></i></a></li>
+         <li><a class="facebook-link" href="#"><i class="fa fa-facebook"></i></a></li>
          <li><a id="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
          <li><a id="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
       </ul>
      </div>
    </section>
-   <script src="js/jquery-3.1.0.js"></script>
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqzYNWs8xYUi9GbqcnvoLw3NGnmninvI0"></script>
-   <script src="js/script.js"></script>
-   <script src="js/lightslider.js"></script>
 </body>
 </html>
