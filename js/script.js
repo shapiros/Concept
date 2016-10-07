@@ -16,6 +16,7 @@ function PageBuilder(organizationData) {
     } else if(browserWidth <= 700){
         no_of_posts = 1;
     }
+
     pb.blocks.forEach(function (block) {
         switch(block.type) {
             case "video":
@@ -75,6 +76,10 @@ PageBuilder.prototype.getSocialLinks = function () {
    $("a.facebook-link").attr('href',facebook.value);
    $("a.twitter-link").attr('href',twitter.value);
    $("#school-name").html(pb.organizationData.title);
+   $(".cover-content img.ph").remove();
+   $(".cover-title").html(pb.organizationData.title);
+   $(".cover-description").html(pb.organizationData.blocks[0].items[0].message.substring(0,100)+"...");
+   //console.log(pb.organizationData.blocks[0].items[0].message);
 };
 
 PageBuilder.prototype.handleMessageBlock = function (block) {
