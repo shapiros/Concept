@@ -88,6 +88,8 @@ div.qlinks ul li a span{
   z-index: 999;
   font-size: 18px;
   opacity: 0.5;
+  width: 100%;
+  left: 0;
   text-align: center;
 }
 div.qlinks ul li a:hover span{
@@ -199,7 +201,42 @@ Cover
    display:flex;
    flex-direction:column;
    justify-content:space-between;
+   position: relative;
 }
+.cover-content{
+  height: 100%;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(30,87,153,0) 0%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(30,87,153,0) 0%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
+}
+.cover-content div.text{
+  position: absolute;
+  bottom:100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding:0px 40px;
+}
+
+.cover-content div.text p.cover-title{
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  float: left;
+  text-align: right;
+  width: 35%;
+  margin-right: 40px;
+}
+.cover-content div.text p.cover-description{
+  font-size: 17px;
+  color: rgba(255,255,255,0.7);
+  float: right;
+  text-align: left;
+  width: 50%;
+}
+
 .desktop{
   display: none;
 }
@@ -491,7 +528,7 @@ div.instagram-posts{
 }
 
 .subscribe{
-   height: 70px;
+   min-height: 70px;
    display: flex;
    flex-direction:row;
    background: #3b4b64;
