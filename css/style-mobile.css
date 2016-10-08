@@ -189,7 +189,25 @@ Cover
    justify-content:space-between;
    position: relative;
 }
-
+.featured-events,.latest-news{
+  position: relative;
+  padding-bottom: 50px;
+}
+a.view-btn{
+  text-transform: uppercase;
+  padding: 10px 0px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(254, 182, 38);
+  position: absolute;
+  left:25%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  bottom:0px;
+  border: 2px solid rgb(254, 182, 38);
+}
 .cover-content{
   height: 100%;
   width: 100%;
@@ -522,7 +540,7 @@ div.instagram-posts{
 
 .subscribe{
    padding-bottom:20px;
-   height: 160px;
+   min-height: 160px;
    display: flex;
    flex-direction:column;
    background: #3b4b64;
@@ -694,5 +712,6 @@ About School Container
    p.description{
       margin-bottom:0px;
       margin-top: 10px;
+      font-size: 14px;
    }
 }

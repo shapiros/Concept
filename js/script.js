@@ -280,10 +280,10 @@ PageBuilder.prototype.getLocation = function () {
     //console.log(lat+""+long);
     var code="";
     if(location.address!=null){
-      code += "<p class=\"address\"><span><i class=\"fa fa-location-arrow\" style=\"padding:0;padding-right:15px\"></i>Address </span><br/>"+location.address+", "+location.city+", "+location.state+"</p>";
+      code += "<p class=\"address\"><span><i class=\"fa fa-location-arrow\" style=\"padding:0;padding-right:15px\"></i>Address </span>"+location.address+", "+location.city+", "+location.state+"</p>";
     }
     if(location.phone!=null){
-     code += "<p class=\"address\"><span><i class=\"fa fa-phone\" style=\"padding:0;padding-right:15px\"></i>Phone </span><br/>"+location.phone+"</p>";
+     code += "<p class=\"address\"><span><i class=\"fa fa-phone\" style=\"padding:0;padding-right:15px\"></i>Phone </span>"+location.phone+"</p>";
     }
     pb.mapLocation();
     $("#mylocation").append(code);
