@@ -16,7 +16,13 @@ p{
 div.PH img{
   margin: 20px 0px;
 }
-
+.section-header{
+  position: relative;
+}
+a.view-btn:hover{
+  background-color:rgb(254, 182, 38);
+  color: white;
+}
 .connect-with-us{
    display: flex;
    align-items: center;
@@ -53,7 +59,6 @@ div.PH img{
   font-size: 3rem;
   font-weight: 200;
 }
-
 nav.navbar.navbar-default{
    min-height: 70px;
    width: 100%;
@@ -70,7 +75,38 @@ a{
 a.btn:hover,a.btn-large:hover{
    box-shadow: 0px 10px 28.5px 1.5px rgba(0, 0, 0, 0.2);
 }
+@media only screen and (min-width: 2500px) {
+  body{
+    width: 60%;
+    margin: 0 20%;
+    box-shadow: 0px 10px 28.5px 1.5px rgba(0, 0, 0, 0.2);
+  }
+  html{
+    background: #f4f4f4;
+  }
+  .footer div.map{
+    max-width: 400px;
+  }
+  a.view-btn.mobile-tablet{
+   display: none;
+  }
+}
 @media only screen and (min-width: 1025px) {
+  a.view-btn{
+    text-transform: uppercase;
+    padding: 10px 50px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(254, 182, 38);
+    position: absolute;
+    bottom:50px;
+    left:50px;
+    border: 2px solid rgb(254, 182, 38);
+  }
+  .featured-events a.view-btn{
+    left:50px;
+  }
    /************************
    Staff Directory
    ************************/
@@ -78,6 +114,7 @@ a.btn:hover,a.btn-large:hover{
    {
       background-color: #f4f4f4;
       padding-top: 50px;
+      position: relative;
    }
    section.staff-directory ul.nav-tabs{
       padding: 10px 150px;
@@ -190,7 +227,7 @@ a.btn:hover,a.btn-large:hover{
     align-items: center;
     width: 100%;
     opacity: 1;
-    padding: 0px 150px;
+    padding: 0px 180px;
     transition: opacity 0.55s;
     margin-top: 170px;
   }
@@ -318,7 +355,6 @@ Footer
     padding: 0px 5px 10px 0px;
     line-height: 3;
   }
-
   section.footer div h2.f-title>i{
     padding-right: 20px;
   }
@@ -441,11 +477,13 @@ section.fe-ln{
    width: 45%;
    border: none;
    border-right:2px solid rgba(0,0,0,0.1);
-   padding: 30px 50px 50px 0px;
+   padding: 30px 50px 130px 0px;
+   position: relative;
 }
 .latest-news{
    width: 45%;
    padding: 30px 0px 50px 50px;
+   position: relative;
 }
 .slide{
    position: relative;
@@ -605,7 +643,7 @@ About School
 ********************************/
 section.about-school{
    border-bottom: 2px solid rgba(0,0,0,0.1);
-   padding: 50px 0px 100px 0px;
+   padding: 20px 0px 60px 0px;
 }
 .about-school-container{
    display: flex;
@@ -657,13 +695,20 @@ section.cover{
    background-size: cover;
    position: relative;
 }
+.progress-container{
+  height: 100%;
+  position: absolute;
+  left:0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
 .progress{
    height: 300px;
    width: 400px;
    background-repeat: no-repeat;
-   position: absolute;
-   left: 60px;
-   top: 150px;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -679,12 +724,6 @@ img.progress-background{
    height: 90vh;
    max-height: 800px;
    width: auto;
-}
-.progress-container{
-  height: 100%;
-  position: absolute;
-  left:0;
-  background:t
 }
 .progress .circular-progress{
    height: 150px;

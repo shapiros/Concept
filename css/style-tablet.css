@@ -11,6 +11,25 @@ z-index: 9999;
 .desktop-only{
   display: none;
 }
+a.view-btn{
+  text-transform: uppercase;
+  padding: 10px 0px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(254, 182, 38);
+  position: absolute;
+  left:40%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  bottom:0px;
+  border: 2px solid rgb(254, 182, 38);
+}
+.latest-news{
+  border-top: 2px solid rgba(0,0,0,0.1);
+  padding-top: 40px;
+}
 /************************
 Quick Link Slider
 ************************/
@@ -194,7 +213,7 @@ a.slider-nav.left{
 Cover
 **************************/
 .cover{
-   height:70vh;
+   height:700px;
    background: url(../assets/cover.jpeg);
    background-size:cover;
    background-position:center;
@@ -301,6 +320,7 @@ section.footer{
   display: block;
   height: 350px;
   padding: 30px 60px;
+  position: relative;
 }
 .footer div h2.f-title{
   color: #fff;
@@ -332,16 +352,13 @@ section.footer{
   justify-content: space-between;
   float: right;
   width: 100%;
-  margin-top: 80px;
+  margin-top: 140px;
   position: relative;
 }
 div.branding>a>img{
   height: 40px;
   width: auto;
   float: left;
-  position: absolute;
-  left: 0;
-  top: 0;
 }
 div.branding>ul{
   float: right;
@@ -358,7 +375,8 @@ div.branding>ul>li>a{
 }
 .footer>div>p{
   color:#fff;
-  font-size: 0.95rem;
+  font-size: 14px;
+  padding: 10px 0px;
 }
 .footer>div>p span{
   color:rgb(254, 182, 38);
@@ -600,6 +618,10 @@ div.instagram-posts{
       text-align: center;
       margin-bottom: 40px;
    }
+   h2.section-title.lvl-2{
+     font-size: 25px;
+     text-align: center;
+   }
    h2.section-title i{
       margin-right: 20px;
    }
@@ -647,11 +669,18 @@ Featured Events & Latest News
     justify-content: space-around;
     padding: 0px 10%;
   }
+  .section-header h2{
+    text-align: left;
+  }
    section.latest-news{
       margin-top:40px;
    }
    .featured-events div.PH img,.latest-news div.PH img{
      padding: 0px 20%;
+   }
+   .featured-events,.latest-news{
+      position: relative;
+      padding-bottom: 60px;
    }
    .f-event,.l-news{
       display: flex;
