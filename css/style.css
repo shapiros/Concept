@@ -35,8 +35,8 @@ a.view-btn:hover{
 }
 .free-btn span{
   position: absolute;
-  top: -3px;
-  left: -3px;
+  top: -4px;
+  left: -5px;
   height: 50%;
 }
 .free-btn span img{
