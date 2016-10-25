@@ -1,9 +1,9 @@
-	/*
-  	Flaticon icon font: Flaticon
-  	Creation date: 25/10/2016 13:08
-  	*/
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 25/10/2016 13:08
+    */
 
-@font-face {
+    @font-face {
   font-family: "Flaticon";
   src: url("./Flaticon.eot");
   src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
@@ -21,13 +21,22 @@
   }
 }
 
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
-  font-family: Flaticon;
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
   font-style: normal;
-}
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
 
-.flaticon-approve-circular-button:before { content: "\f100"; }
+    .flaticon-approve-circular-button:before { content: "\f100"; }
 .flaticon-calendar:before { content: "\f101"; }
 .flaticon-favourite-circular-button:before { content: "\f102"; }
 .flaticon-link:before { content: "\f103"; }
@@ -38,3 +47,15 @@
 .flaticon-target:before { content: "\f108"; }
 .flaticon-users:before { content: "\f109"; }
 .flaticon-video-player:before { content: "\f10a"; }
+    
+    $font-Flaticon-approve-circular-button: "\f100";
+    $font-Flaticon-calendar: "\f101";
+    $font-Flaticon-favourite-circular-button: "\f102";
+    $font-Flaticon-link: "\f103";
+    $font-Flaticon-newspaper: "\f104";
+    $font-Flaticon-share: "\f105";
+    $font-Flaticon-share-1: "\f106";
+    $font-Flaticon-share-2: "\f107";
+    $font-Flaticon-target: "\f108";
+    $font-Flaticon-users: "\f109";
+    $font-Flaticon-video-player: "\f10a";
