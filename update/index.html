@@ -113,100 +113,249 @@
       <h2 class="update-title">Fill Up the Website Information</h2>
       <p class="update-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
       <div class="update-progress">
-
-
+               <span class="completed">1 Completed</span>
+               <span class="remaining">6 Remaining</span>
+               <progress max="100" value="30"></progress>
       </div>
    </section>
    <section class="update-info">
-      <div class="panel-group" id="accordion">
 
-        <div class="panel panel-default complete">
-          <div class="panel-heading">
+   <div class="panel-group" id="accordion">
+
+      <div class="panel panel-default complete">
+         <div class="panel-heading">
             <h4 class="panel-title">
-              <a id="1" data-toggle="collapse" data-parent="#accordion" href="#mission">
-                <span class="panel-icon"><i style="text-decoration:none" class="flaticon-target"></i></span>
-                <span class="title">Mission and Vision<span>
-              </a>
+               <a id="1" data-toggle="collapse" data-parent="#accordion" href="#mission">
+               <span class="panel-icon"><i style="text-decoration:none" class="flaticon-target"></i></span>
+               <span class="title">Mission and Vision<span>
+               </a>
             </h4>
             <span class="complete">completed</span>
             <span class="expand"><i class="fa fa-chevron-right"></i></span>
-          </div>
-          <div id="mission" class="panel-collapse collapse">
+         </div>
+         <div id="mission" class="panel-collapse collapse">
             <div class="panel-body">
-              <p class="description">Enter any official mission or vision text</p>
-              <form>
-                <div class="text-field">
-                  <span class="label">Mission and Vision Message</span>
-                  <textarea type="text" name="email" placeholder="Message"></textarea>
-                </div>
-                <div class="footer">
-                  <span class="s_no">1/7</span>
-                  <input type="submit" name="submit" value="SUBMIT"/>
-                </div>
-              </form>
+               <p class="description">Enter any official mission or vision text</p>
+               <form>
+                  <div class="text-field">
+                     <span class="label">Mission and Vision Message</span>
+                     <textarea type="text" name="email" placeholder="Message"></textarea>
+                  </div>
+                  <div class="footer">
+                     <span class="s_no">1/8</span>
+                     <input type="submit" name="submit" value="SUBMIT"/>
+                  </div>
+               </form>
             </div>
-          </div>
-        </div>
-
-        <div class="panel panel-default">
-        <div class="panel-heading">
-          <span class="panel-icon">
-            <i class="flaticon-video-player"></i>
-          </span>
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#video">Video</a>
-          </h4>
-          <span class="complete">completed</span>
-          <span class="expand"><i class="fa fa-chevron-right"></i></span>
-        </div>
-        <div id="video" class="panel-collapse collapse in">
-          <div class="panel-body">
-            <p class="description">The Share link to hte main video of channel</p>
-            <form>
-              <div class="text-field">
-                <span class="label">Video URL</span>
-                <input type="text" name="email" placeholder="https://www.youtube.com/watch?v=xdl0UWk-1FQ"></input>
-              </div>
-              <div class="footer">
-                <span class="s_no">2/7</span>
-                <input type="submit" name="submit" value="SUBMIT"/>
-              </div>
-            </form>
-          </div>
-        </div>
+         </div>
       </div>
 
       <div class="panel panel-default">
-      <div class="panel-heading">
-        <span class="panel-icon">
-          <i class="flaticon-newspaper"></i>
-        </span>
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#news">News</a>
-        </h4>
-        <span class="complete">completed</span>
-        <span class="expand"><i class="fa fa-chevron-right"></i></span>
-      </div>
-      <div id="news" class="panel-collapse collapse">
-        <div class="panel-body">
-          <p class="description">The sites RSS feed</p>
-          <form>
-            <div class="text-field">
-              <span class="label">RSS feed's URL</span>
-              <input type="text" name="email" placeholder="Example: http://www.feedforall.com/sample-feeds"></input>
+         <div class="panel-heading">
+            <span class="panel-icon">
+            <i class="flaticon-video-player"></i>
+            </span>
+            <h4 class="panel-title">
+               <a data-toggle="collapse" data-parent="#accordion" href="#video">Video</a>
+            </h4>
+            <span class="complete">completed</span>
+            <span class="expand"><i class="fa fa-chevron-right"></i></span>
+         </div>
+         <div id="video" class="panel-collapse collapse in">
+            <div class="panel-body">
+               <p class="description">The Share link to hte main video of channel</p>
+               <form>
+                  <div class="text-field">
+                     <span class="label">Video URL</span>
+                     <input type="text" name="video-url" placeholder="https://www.youtube.com/watch?v=xdl0UWk-1FQ"></input>
+                  </div>
+                  <div class="footer">
+                     <span class="s_no">2/8</span>
+                     <input type="submit" name="submit" value="SUBMIT"/>
+                  </div>
+               </form>
             </div>
-            <div class="footer">
-              <span class="s_no">3/7</span>
-              <input type="submit" name="submit" value="SUBMIT"/>
-            </div>
-          </form>
-        </div>
+         </div>
       </div>
-    </div>
-      </div>
-   </section>
-   <script>
 
-   </script>
- </body>
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <span class="panel-icon">
+            <i class="flaticon-newspaper"></i>
+            </span>
+            <h4 class="panel-title">
+               <a data-toggle="collapse" data-parent="#accordion" href="#news">News</a>
+            </h4>
+            <span class="complete">completed</span>
+            <span class="expand"><i class="fa fa-chevron-right"></i></span>
+         </div>
+         <div id="news" class="panel-collapse collapse">
+            <div class="panel-body">
+               <p class="description">The sites RSS feed</p>
+               <form>
+                  <div class="text-field">
+                     <span class="label">RSS feed's URL</span>
+                     <input type="url" name="rss-url" placeholder="Example: http://www.feedforall.com/sample-feeds"></input>
+                  </div>
+                  <div class="footer">
+                     <span class="s_no">3/8</span>
+                     <input type="submit" name="submit" value="SUBMIT"/>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <span class="panel-icon">
+            <i class="flaticon-link"></i>
+            </span>
+            <h4 class="panel-title">
+               <a data-toggle="collapse" data-parent="#accordion" href="#links">Links</a>
+            </h4>
+            <span class="complete">completed</span>
+            <span class="expand"><i class="fa fa-chevron-right"></i></span>
+         </div>
+         <div id="links" class="panel-collapse collapse">
+            <div class="panel-body">
+               <p class="description">Validate site ownership to access the link management feature. (Continue)</p>
+               <form>
+                  <div class="text-field">
+                     <span class="label">URL</span>
+                     <input type="url" name="rss-url" placeholder="Example: http://www.feedforall.com/sample-feeds"></input>
+                  </div>
+                  <div class="footer">
+                     <span class="s_no">3/8</span>
+                     <input type="submit" name="submit" value="SUBMIT"/>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <span class="panel-icon">
+            <i class="flaticon-share-1"></i>
+            </span>
+            <h4 class="panel-title">
+               <a data-toggle="collapse" data-parent="#accordion" href="#social">Social</a>
+            </h4>
+            <span class="complete">completed</span>
+            <span class="expand"><i class="fa fa-chevron-right"></i></span>
+         </div>
+         <div id="social" class="panel-collapse collapse">
+            <div class="panel-body">
+               <p class="description">Social Links</p>
+               <form>
+                  <div class="text-field">
+                     <span class="label">Facebook</span>
+                     <input type="url" name="fb-url" placeholder="Example: https://fb.com/YourSchool/"></input>
+                  </div>
+                  <div class="text-field">
+                     <span class="label">Twitter</span>
+                     <input type="url" name="twitter-url" placeholder="Example: http://www.twitter.com/YourSchool/"></input>
+                  </div>
+                  <div class="text-field">
+                     <span class="label">Other</span>
+                     <input type="url" name="other-url" placeholder="Example: http://www.othersocial.com/YourSchool/"></input>
+                  </div>
+                  <div class="footer">
+                     <span class="s_no">4/8</span>
+                     <input type="submit" name="submit" value="SUBMIT"/>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <h4 class="panel-title">
+               <a id="1" data-toggle="collapse" data-parent="#accordion" href="#logo">
+               <span class="panel-icon"><i style="text-decoration:none" class="flaticon-favourite-circular-button"></i></span>
+               <span class="title">Logo<span>
+               </a>
+            </h4>
+            <span class="complete">completed</span>
+            <span class="expand"><i class="fa fa-chevron-right"></i></span>
+         </div>
+         <div id="logo" class="panel-collapse collapse">
+            <div class="panel-body">
+               <p class="description">Upload an image</p>
+               <form>
+                  <div class="text-field">
+                     <span class="label"></span>
+                     <input type="url" name="file" placeholder="Image URL"></input>
+                  </div>
+                  <div class="footer">
+                     <span class="s_no">5/8</span>
+                     <input type="submit" name="submit" value="SUBMIT"/>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <h4 class="panel-title">
+               <a id="1" data-toggle="collapse" data-parent="#accordion" href="#calendar">
+               <span class="panel-icon"><i style="text-decoration:none" class="flaticon-calendar"></i></span>
+               <span class="title">Calendar<span>
+               </a>
+            </h4>
+            <span class="complete">completed</span>
+            <span class="expand"><i class="fa fa-chevron-right"></i></span>
+         </div>
+         <div id="calendar" class="panel-collapse collapse">
+            <div class="panel-body">
+               <p class="description">Enter any official mission or vision text</p>
+               <form>
+                  <div class="text-field">
+                     <span class="label">Mission and Vision Message</span>
+                     <textarea type="url" name="email" placeholder="Message"></textarea>
+                  </div>
+                  <div class="footer">
+                     <span class="s_no">6/8</span>
+                     <input type="submit" name="submit" value="SUBMIT"/>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <h4 class="panel-title">
+               <a id="1" data-toggle="collapse" data-parent="#accordion" href="#staff">
+               <span class="panel-icon"><i style="text-decoration:none" class="flaticon-users"></i></span>
+               <span class="title">Staff Directory<span>
+               </a>
+            </h4>
+            <span class="complete">completed</span>
+            <span class="expand"><i class="fa fa-chevron-right"></i></span>
+         </div>
+         <div id="staff" class="panel-collapse collapse">
+            <div class="panel-body">
+               <p class="description">Validate site ownership to access the directory sync feature. (Continue)</p>
+               <form>
+                  <div class="text-field">
+                     <span class="label">URL</span>
+                     <textarea type="url" name="email" placeholder="Message"></textarea>
+                  </div>
+                  <div class="footer">
+                     <span class="s_no">7/8</span>
+                     <input type="submit" name="submit" value="SUBMIT"/>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
+   </div>
+</section>
+
+</body>
 </html>
