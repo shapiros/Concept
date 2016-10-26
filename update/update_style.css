@@ -16,6 +16,7 @@ nav.navbar.navbar-default{
    justify-content: space-between;
    align-items: center;
 }
+
 img.navbar-logo{
    height:40px;
    width: auto;
@@ -23,6 +24,27 @@ img.navbar-logo{
    position: absolute;
    z-index: 100;
    top:15px;
+}
+a.get-help,a.guide-me{
+   padding: 10px 30px;
+   background-color: rgba(254, 182, 38,0.9);
+   color: rgba(0,0,0,0.6);
+   font-weight: bold;
+   border-radius: 4px;
+}
+a.get-help i,a.guide-me i{
+   padding-right: 10px;
+}
+a.guide-me{
+   padding: 8px 10px;
+   position: absolute;
+   right: 30px;
+   display: none;
+   transition: all 1.25s;
+   transition-delay: 1s;
+}
+div.panel.open a.guide-me{
+   display: block;
 }
 a:focus,a:hover{
   outline: none;
@@ -60,6 +82,28 @@ section.update-info{
 /******************************
 Panels
 ******************************/
+.panel-group .panel+.panel{
+   margin-top: 0px;
+   border: none;
+   border-bottom: 1px solid rgba(0,0,0,0.1);
+   border-radius: 0px;
+}
+.panel-group .panel+.panel.open{
+   margin: 30px 0px;
+   padding: 10px;
+}
+.panel-group div.panel{
+   border-radius: 0px;
+}
+.panel-group div.panel.open{
+   margin: 30px 0px;
+   padding: 10px;
+   margin-top: 0px;
+   border: 1px solid rgba(0,0,0,0.1);
+}
+.panel{
+   border-radius: 0px;
+}
 .panel div.panel-heading{
   height: 70px;
   background: #fff;
@@ -106,17 +150,17 @@ span.panel-icon i{
 }
 .panel-default>.panel-heading+.panel-collapse>.panel-body{
   border:none;
-  padding: 20px 40px 20px 40px;
+  padding: 0px 20px 20px 20px;
 }
-
 div.text-field{
   width: 100%;
   margin: 30px 0px;
 }
 div.text-field span.label{
-  color: rgba(0,0,0,0.6);
+  color:#094a7e;
+  opacity: 0.8;
   font-size: 15px;
-  font-weight: normal;
+  font-weight: 600;
   font-family: "Open Sans", sans-serif;
   padding: 0;
 }
@@ -156,7 +200,9 @@ form div.footer input[type=submit],input[type=file]{
 .panel.complete div.panel-heading h4.panel-title a span.title{
   text-decoration: line-through;
 }
-
+.panel.open div.panel-heading span.complete,.panel.open div.panel-heading span.expand{
+   display: none;
+}
 div.update-progress{
    display: flex;
    width: 100%;
@@ -184,8 +230,8 @@ progress {
   display: block;
   border-radius: 10px;
   background-color: rgba(255,255,255,0.1);
-  width: 100%;
   height: 10px;
+  width: 100%;
   border: none;
 }
 progress::-webkit-progress-bar {
@@ -201,4 +247,140 @@ progress::-moz-progress-bar {
    background-color: rgb(254, 182, 38);
    border-radius: 5px;
    border: none;
+}
+/********************************
+Mobile Responsive
+********************************/
+@media only screen and (min-width:320px) and (max-width:700px) {
+   .nav-wrapper{
+      padding: 0px 30px;
+   }
+   img.navbar-logo{
+      height:30px;
+      top:20px;
+   }
+   section.update-header{
+      height: 450px;
+      padding: 50px 30px;
+      position: relative;
+   }
+   .update-header h2{
+      font-size: 25px;
+      text-align: center;
+   }
+   .update-header p.update-des{
+      font-size: 18px;
+      margin-top: 20px;
+      text-align: center;
+   }
+   section.update-info{
+      margin-top: -130px;
+      padding: 0px 30px;
+      overflow: hidden;
+   }
+   /******************************
+   Panels
+   ******************************/
+   .panel div.panel-heading{
+     height: 50px;
+   }
+   h4.panel-title{
+     font-size: 15px;
+   }
+   div.panel-heading span.expand{
+     position: absolute;
+     right: 30px;
+     top: 35%;
+   }
+   div.panel-heading span.complete{
+     display: none;
+   }
+   span.panel-icon i{
+     font-size: 20px;
+     padding: 0px 10px 0px 15px;
+   }
+   .panel-default>.panel-heading+.panel-collapse>.panel-body{
+     padding: 15px;
+   }
+   div.text-field{
+     margin: 15px 0px;
+   }
+   div.text-field span.label{
+     font-size: 13px;
+  }
+   textarea, div.text-field input[type=text],div.text-field input[type=url]{
+      font-size: 13px;
+      padding: 5px 10px;
+      margin-top: 10px;
+   }
+   .panel.complete div.panel-heading span.complete{
+     display: none;
+   }
+   a.guide-me{
+      padding: 5px 10px;
+      font-size: 10px;
+      position: absolute;
+      right: 10px;
+      display: none;
+      transition: all 0.25s;
+   }
+}
+@media only screen and (min-width:701px) and (max-width:1024px) {
+   .nav-wrapper{
+      padding: 0px 100px;
+   }
+   img.navbar-logo{
+      height:30px;
+      top:20px;
+   }
+   section.update-header{
+      height: 450px;
+      padding: 50px 100px;
+      position: relative;
+   }
+   .update-header h2{
+      font-size: 25px;
+      text-align: center;
+   }
+   .update-header p.update-des{
+      font-size: 18px;
+      margin-top: 20px;
+      text-align: center;
+   }
+   section.update-info{
+      margin-top: -130px;
+      padding: 0px 100px;
+   }
+   /******************************
+   Panels
+   ******************************/
+   .panel div.panel-heading{
+     height: 60px;
+   }
+   h4.panel-title{
+     font-size: 20px;
+   }
+   div.panel-heading span.expand{
+     position: absolute;
+     right: 30px;
+     top: 35%;
+   }
+   div.panel-heading span.complete{
+     display: none;
+   }
+   span.panel-icon i{
+     font-size: 25px;
+     padding: 20px 10px 0px 20px;
+   }
+   div.text-field{
+     margin: 15px 0px;
+   }
+   div.text-field span.label{
+     font-size: 12px;
+   }
+   textarea, div.text-field input[type=text],div.text-field input[type=url]{
+      font-size: 15px;
+      padding: 8px 10px;
+      margin-top: 10px;
+   }
 }

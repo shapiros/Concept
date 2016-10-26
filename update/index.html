@@ -74,7 +74,7 @@
          "jQuery.ui": "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js",
          "SchoolBlocksApp.bundles.vendor":"https://d6vze32yv269z.cloudfront.net/assets/2.2/assets/dist/js/SchoolBlocksApp.bundles.vendor.js",
          //"SchoolBlocksApp.bundles.app":"../ApiExample.js",
-         //"unslider":"../js/unslider-min.js",
+         "update_style":"update_script.js",
          //"SchoolBlocksApp.bundles.pageBuilder":"../js/script.js"
      }, {
          "shim": {
@@ -85,14 +85,16 @@
          }
      });
 
-     SchoolBlocksApp.ready(function () {
-         var api = new SchoolBlocksApp.Api();
-         api.viewOrganization('dba3511f-32ef-486f-ade2-7540ae28922e', null, null,
-             ['locations', 'thirdPartyLinks', 'blocks'])
-                 .done(function (response) {
-                     var pb = new PageBuilder(response);
-                 });
-     }, ["SchoolBlocksApp.bundles.app", "SchoolBlocksApp.bundles.pageBuilder"]);
+   /*
+   SchoolBlocksApp.ready(function () {
+      var api = new SchoolBlocksApp.Api();
+      api.viewOrganization('dba3511f-32ef-486f-ade2-7540ae28922e', null, null,
+          ['locations', 'thirdPartyLinks', 'blocks'])
+              .done(function (response) {
+                  var pb = new PageBuilder(response);
+              });
+   }, ["SchoolBlocksApp.bundles.app", "SchoolBlocksApp.bundles.pageBuilder"]);
+   */
    </script>
 
    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -106,7 +108,7 @@
    <nav class="navbar navbar-default">
       <div class="nav-wrapper">
          <a class="navbar-logo" href="#"><img class="navbar-logo" alt="Brand" src="../assets/Logo_blue.png"></a>
-         <a class="guide-me" href="#">Guide Me</a>
+         <a class="get-help" href="#"><i class="fa fa-question-circle"></i>Get Help</a>
       </div>
    </nav>
    <section class="update-header">
@@ -121,17 +123,17 @@
    <section class="update-info">
 
    <div class="panel-group" id="accordion">
-
-      <div class="panel panel-default complete">
+      <div id="panel-1" class="panel complete panel-default">
          <div class="panel-heading">
             <h4 class="panel-title">
-               <a id="1" onclick="clicked(this.id);" data-toggle="collapse" data-parent="#accordion" href="#mission">
+               <a id="1" onclick="toggleOpen(this.id);" data-toggle="collapse" data-parent="#accordion" href="#mission">
                <span class="panel-icon"><i style="text-decoration:none" class="flaticon-target"></i></span>
                <span class="title">Mission and Vision<span>
                </a>
             </h4>
             <span class="complete">completed</span>
             <span class="expand"><i class="fa fa-chevron-right"></i></span>
+            <a id="guide-me-1" class="guide-me" href="#"><i class="fa fa-youtube-play"></i>Guide Me</a>
          </div>
          <div id="mission" class="panel-collapse collapse">
             <div class="panel-body">
@@ -150,16 +152,18 @@
          </div>
       </div>
 
-      <div class="panel panel-default">
+
+      <div id="panel-2" class="panel panel-default open">
          <div class="panel-heading">
             <span class="panel-icon">
             <i class="flaticon-video-player"></i>
             </span>
             <h4 class="panel-title">
-               <a id="2" onclick="clicked(this.id);"data-toggle="collapse" data-parent="#accordion" href="#video">Video</a>
+               <a id="2" onclick="toggleOpen(this.id);" data-toggle="collapse" data-parent="#accordion" href="#video">Video</a>
             </h4>
             <span class="complete">completed</span>
             <span class="expand"><i class="fa fa-chevron-right"></i></span>
+            <a id="guide-me-2" class="guide-me" href="#"><i class="fa fa-youtube-play"></i>Guide Me</a><a id="guide-me-1" class="guide-me" href="#"><i class="fa fa-youtube-play"></i>Guide Me</a>
          </div>
          <div id="video" class="panel-collapse collapse in">
             <div class="panel-body">
@@ -178,16 +182,17 @@
          </div>
       </div>
 
-      <div class="panel panel-default">
+      <div id="panel-3" class="panel panel-default">
          <div class="panel-heading">
             <span class="panel-icon">
             <i class="flaticon-newspaper"></i>
             </span>
             <h4 class="panel-title">
-               <a id="3" onclick="clicked(this.id);" data-toggle="collapse" data-parent="#accordion" href="#news">News</a>
+               <a id="3" onclick="toggleOpen(this.id);" data-toggle="collapse" data-parent="#accordion" href="#news">News</a>
             </h4>
             <span class="complete">completed</span>
             <span class="expand"><i class="fa fa-chevron-right"></i></span>
+            <a id="guide-me-3" class="guide-me" href="#"><i class="fa fa-youtube-play"></i>Guide Me</a><a id="guide-me-1" class="guide-me" href="#"><i class="fa fa-youtube-play"></i>Guide Me</a>
          </div>
          <div id="news" class="panel-collapse collapse">
             <div class="panel-body">
@@ -206,16 +211,17 @@
          </div>
       </div>
 
-      <div class="panel panel-default">
+      <div id="panel-4" class="panel panel-default">
          <div class="panel-heading">
             <span class="panel-icon">
             <i class="flaticon-link"></i>
             </span>
             <h4 class="panel-title">
-               <a id="4" onclick="clicked(this.id);" data-toggle="collapse" data-parent="#accordion" href="#links">Links</a>
+               <a id="4" onclick="toggleOpen(this.id);" data-toggle="collapse" data-parent="#accordion" href="#links">Links</a>
             </h4>
             <span class="complete">completed</span>
             <span class="expand"><i class="fa fa-chevron-right"></i></span>
+            <a id="guide-me-4" class="guide-me" href="#"><i class="fa fa-youtube-play"></i>Guide Me</a><a id="guide-me-1" class="guide-me" href="#"><i class="fa fa-youtube-play"></i>Guide Me</a>
          </div>
          <div id="links" class="panel-collapse collapse">
             <div class="panel-body">
@@ -234,16 +240,17 @@
          </div>
       </div>
 
-      <div class="panel panel-default">
+      <div id="panel-5" class="panel panel-default">
          <div class="panel-heading">
             <span class="panel-icon">
             <i class="flaticon-share-1"></i>
             </span>
             <h4 class="panel-title">
-               <a id="5" onclick="clicked(this.id);" data-toggle="collapse" data-parent="#accordion" href="#social">Social</a>
+               <a id="5" onclick="toggleOpen(this.id);" data-toggle="collapse" data-parent="#accordion" href="#social">Social</a>
             </h4>
             <span class="complete">completed</span>
             <span class="expand"><i class="fa fa-chevron-right"></i></span>
+            <a id="guide-me-5" class="guide-me" href="#"><i class="fa fa-youtube-play"></i>Guide Me</a><a id="guide-me-1" class="guide-me" href="#"><i class="fa fa-youtube-play"></i>Guide Me</a>
          </div>
          <div id="social" class="panel-collapse collapse">
             <div class="panel-body">
@@ -270,16 +277,17 @@
          </div>
       </div>
 
-      <div class="panel panel-default">
+      <div id="panel-6" class="panel panel-default">
          <div class="panel-heading">
             <h4 class="panel-title">
-               <a id="6" onclick="clicked(this.id);" data-toggle="collapse" data-parent="#accordion" href="#logo">
+               <a id="6" onclick="toggleOpen(this.id);" data-toggle="collapse" data-parent="#accordion" href="#logo">
                <span class="panel-icon"><i style="text-decoration:none" class="flaticon-favourite-circular-button"></i></span>
                <span class="title">Logo<span>
                </a>
             </h4>
             <span class="complete">completed</span>
             <span class="expand"><i class="fa fa-chevron-right"></i></span>
+            <a id="guide-me-6" class="guide-me" href="#"><i class="fa fa-youtube-play"></i>Guide Me</a><a id="guide-me-1" class="guide-me" href="#"><i class="fa fa-youtube-play"></i>Guide Me</a>
          </div>
          <div id="logo" class="panel-collapse collapse">
             <div class="panel-body">
@@ -298,16 +306,17 @@
          </div>
       </div>
 
-      <div class="panel panel-default">
+      <div id="panel-7" class="panel panel-default">
          <div class="panel-heading">
             <h4 class="panel-title">
-               <a id="7" onclick="clicked(this.id);" data-toggle="collapse" data-parent="#accordion" href="#calendar">
+               <a id="7" onclick="toggleOpen(this.id);" data-toggle="collapse" data-parent="#accordion" href="#calendar">
                <span class="panel-icon"><i style="text-decoration:none" class="flaticon-calendar"></i></span>
                <span class="title">Calendar<span>
                </a>
             </h4>
             <span class="complete">completed</span>
             <span class="expand"><i class="fa fa-chevron-right"></i></span>
+            <a id="guide-me-7" class="guide-me" href="#"><i class="fa fa-youtube-play"></i>Guide Me</a><a id="guide-me-1" class="guide-me" href="#"><i class="fa fa-youtube-play"></i>Guide Me</a>
          </div>
          <div id="calendar" class="panel-collapse collapse">
             <div class="panel-body">
@@ -326,16 +335,17 @@
          </div>
       </div>
 
-      <div class="panel panel-default">
+      <div id="panel-8" class="panel panel-default">
          <div class="panel-heading">
             <h4 class="panel-title">
-               <a id="8" onclick="clicked(this.id);" data-toggle="collapse" data-parent="#accordion" href="#staff">
+               <a id="8" onclick="toggleOpen(this.id);" data-toggle="collapse" data-parent="#accordion" href="#staff">
                <span class="panel-icon"><i style="text-decoration:none" class="flaticon-users"></i></span>
                <span class="title">Staff Directory<span>
                </a>
             </h4>
             <span class="complete">completed</span>
             <span class="expand"><i class="fa fa-chevron-right"></i></span>
+            <a id="guide-me-8" class="guide-me" href="#"><i class="fa fa-youtube-play"></i>Guide Me</a><a id="guide-me-1" class="guide-me" href="#"><i class="fa fa-youtube-play"></i>Guide Me</a>
          </div>
          <div id="staff" class="panel-collapse collapse">
             <div class="panel-body">
@@ -357,9 +367,7 @@
    </div>
 </section>
 <script>
-   function clicked(clicked_id){
-      $("h4.panel-title a#"+clicked_id).toogleClass("open");
-   }
+
 </script>
 </body>
 </html>
