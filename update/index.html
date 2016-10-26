@@ -125,7 +125,7 @@
       <div class="panel panel-default complete">
          <div class="panel-heading">
             <h4 class="panel-title">
-               <a id="1" data-toggle="collapse" data-parent="#accordion" href="#mission">
+               <a id="1" onclick="clicked(this.id);" data-toggle="collapse" data-parent="#accordion" href="#mission">
                <span class="panel-icon"><i style="text-decoration:none" class="flaticon-target"></i></span>
                <span class="title">Mission and Vision<span>
                </a>
@@ -156,7 +156,7 @@
             <i class="flaticon-video-player"></i>
             </span>
             <h4 class="panel-title">
-               <a data-toggle="collapse" data-parent="#accordion" href="#video">Video</a>
+               <a id="2" onclick="clicked(this.id);"data-toggle="collapse" data-parent="#accordion" href="#video">Video</a>
             </h4>
             <span class="complete">completed</span>
             <span class="expand"><i class="fa fa-chevron-right"></i></span>
@@ -184,7 +184,7 @@
             <i class="flaticon-newspaper"></i>
             </span>
             <h4 class="panel-title">
-               <a data-toggle="collapse" data-parent="#accordion" href="#news">News</a>
+               <a id="3" onclick="clicked(this.id);" data-toggle="collapse" data-parent="#accordion" href="#news">News</a>
             </h4>
             <span class="complete">completed</span>
             <span class="expand"><i class="fa fa-chevron-right"></i></span>
@@ -212,7 +212,7 @@
             <i class="flaticon-link"></i>
             </span>
             <h4 class="panel-title">
-               <a data-toggle="collapse" data-parent="#accordion" href="#links">Links</a>
+               <a id="4" onclick="clicked(this.id);" data-toggle="collapse" data-parent="#accordion" href="#links">Links</a>
             </h4>
             <span class="complete">completed</span>
             <span class="expand"><i class="fa fa-chevron-right"></i></span>
@@ -240,7 +240,7 @@
             <i class="flaticon-share-1"></i>
             </span>
             <h4 class="panel-title">
-               <a data-toggle="collapse" data-parent="#accordion" href="#social">Social</a>
+               <a id="5" onclick="clicked(this.id);" data-toggle="collapse" data-parent="#accordion" href="#social">Social</a>
             </h4>
             <span class="complete">completed</span>
             <span class="expand"><i class="fa fa-chevron-right"></i></span>
@@ -273,7 +273,7 @@
       <div class="panel panel-default">
          <div class="panel-heading">
             <h4 class="panel-title">
-               <a id="1" data-toggle="collapse" data-parent="#accordion" href="#logo">
+               <a id="6" onclick="clicked(this.id);" data-toggle="collapse" data-parent="#accordion" href="#logo">
                <span class="panel-icon"><i style="text-decoration:none" class="flaticon-favourite-circular-button"></i></span>
                <span class="title">Logo<span>
                </a>
@@ -301,7 +301,7 @@
       <div class="panel panel-default">
          <div class="panel-heading">
             <h4 class="panel-title">
-               <a id="1" data-toggle="collapse" data-parent="#accordion" href="#calendar">
+               <a id="7" onclick="clicked(this.id);" data-toggle="collapse" data-parent="#accordion" href="#calendar">
                <span class="panel-icon"><i style="text-decoration:none" class="flaticon-calendar"></i></span>
                <span class="title">Calendar<span>
                </a>
@@ -329,7 +329,7 @@
       <div class="panel panel-default">
          <div class="panel-heading">
             <h4 class="panel-title">
-               <a id="1" data-toggle="collapse" data-parent="#accordion" href="#staff">
+               <a id="8" onclick="clicked(this.id);" data-toggle="collapse" data-parent="#accordion" href="#staff">
                <span class="panel-icon"><i style="text-decoration:none" class="flaticon-users"></i></span>
                <span class="title">Staff Directory<span>
                </a>
@@ -356,6 +356,10 @@
 
    </div>
 </section>
-
+<script>
+   function clicked(clicked_id){
+      $("h4.panel-title a#"+clicked_id).toogleClass("open");
+   }
+</script>
 </body>
 </html>
