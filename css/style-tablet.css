@@ -222,7 +222,7 @@ Cover
    justify-content:space-between;
    position: relative;
 }
-.cover-content{
+.cover-content,.vcover-content{
   height: 100%;
   width: 100%;
   background: -moz-linear-gradient(top, rgba(30,87,153,0) 0%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
@@ -230,7 +230,7 @@ Cover
   background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
 }
-.cover-content div.text{
+.cover-content div.text,.vcover-content div.text{
   position: absolute;
   bottom:100px;
   display: flex;
@@ -239,7 +239,7 @@ Cover
   padding:0px 40px;
 }
 
-.cover-content div.text p.cover-title{
+.cover-content div.text p.cover-title, .vcover-content div.text p.cover-title{
   font-size: 25px;
   font-weight: bold;
   color: #fff;
@@ -248,7 +248,7 @@ Cover
   width: 35%;
   margin-right: 40px;
 }
-.cover-content div.text p.cover-description{
+.cover-content div.text p.cover-description,.vcover-content div.text p.cover-description{
   font-size: 17px;
   color: rgba(255,255,255,0.7);
   float: right;

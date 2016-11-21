@@ -4,6 +4,24 @@ body{
     padding: 0;
     font-family: "Open Sans";
 }
+.video-container{
+  min-height: 650px;
+  height: 80vh;
+  max-height: 800px;
+  overflow: hidden;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+video {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.stopfade {
+   opacity: .5;
+}
 img{
   max-width: 100%;
 }
@@ -30,6 +48,14 @@ a.view-btn:hover{
    color: #094a7e;
    font-style: italic;
 }
+.connect-with-us-white{
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-style: italic;
+  color: #fff;
+}
+
 .free-btn{
     position: relative;
 }
@@ -751,7 +777,7 @@ img.progress-background{
    font-weight: bold;
    font-size: 15px;
 }
-.cover-content{
+.cover-content,.vcover-content{
   height: 100%;
   width: 100%;
   background: -moz-linear-gradient(top, rgba(30,87,153,0) 0%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
@@ -764,6 +790,7 @@ img.progress-background{
   right: 150px;
   bottom:130px;
 }
+
 .cover-content div.text p{
   text-align: right;
 }
@@ -779,6 +806,28 @@ img.progress-background{
   float: right;
   margin-top: 20px;
 }
+.vcover-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vcover-content div.text{
+  padding-bottom: 50px;
+}
+.vcover-content div.text p{
+  text-align: center;
+}
+.vcover-content div.text p.cover-title{
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+.vcover-content div.text p.cover-description{
+  font-size: 20px;
+  color: rgba(255,255,255,0.7);
+  margin-top: 20px;
+}
+
 .subscribe{
    min-height: 100px;
    display: flex;
