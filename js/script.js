@@ -29,6 +29,7 @@ function PageBuilder(organizationData) {
 
             case "eventlist":
                 pb.handleEventListBlock(block, no_of_posts);
+
                 break;
 
             case "newsstream":
@@ -311,7 +312,7 @@ PageBuilder.prototype.handleQuicklinkBlock = function (block,pod) {
     var links = block.items;
     var index = 0,code ="",j=1;
     var posts = links.length;
-    $("section.quicklinks").css('background-image','url(./assets/quick-link.png)')
+    //$("section.quicklinks").css('background-image','url(./assets/quick-link.png)')
     $("section.quicklinks div.contents").css('background-color','rgba(0,4,24,0.8)')
     $("div.qlinks ul li").remove();
     if($(document).width()<=700)pod=1;
@@ -369,7 +370,6 @@ PageBuilder.prototype.handleStaffBlock = function (block,pod) {
     var subject = block.items;
     var index = 0,code="",code1="",j=1;
     var temp = "active"
-    console.log(pod);
     var posts = subject.length;
     while(index<posts){
       //code += "<li><a data-toggle=\"tab\" href=\"#"+subject[index].title+"\">"+subject[index].title+"</a></li>";
