@@ -196,7 +196,7 @@ a.btn:hover,a.btn-large:hover{
   Quick Link Slider
   ************************/
   section.quicklinks{
-    background: #212121;
+    background: transparent;
     background-size: cover;
     background-position: center;
   }
@@ -691,7 +691,7 @@ section.cover{
    min-height: 600px;
    height: 90vh;
    max-height: 800px;
-   background: url(../assets/cover.jpeg);
+   background: transparent;
    background-size: cover;
    position: relative;
 }
