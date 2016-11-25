@@ -43,7 +43,7 @@ SchoolBlocksApp.Api = function (baseUrl) {
             "id": "dba3511f-32ef-486f-ade2-7540ae28922e",
             "parent_id": "root",
             "user_id": "root",
-            "title": "Ross Montessori School",
+            "title": "Grossmont Union High School",
             "created": "2015-02-11 06:44:28.098659+00",
             "modified": "2016-08-15 22:52:10.147496+00",
             "type": "school",
@@ -56,14 +56,14 @@ SchoolBlocksApp.Api = function (baseUrl) {
             "locations": [
                 {
                     "id": 1191,
-                    "address": "407 MERRILL AVE",
+                    "address": "1100 Murray Dr.",
                     "address2": null,
-                    "city": "CARBONDALE",
+                    "city": "El Cajon",
                     "state": "CO",
-                    "zip": 23200,
+                    "zip": 92020,
                     "zip4": null,
-                    "coordinates": "(39.404388,-107.211195)",
-                    "phone": 9709637198,
+                    "coordinates": "(32.780582, -116.986118)",
+                    "phone": 16196686000,
                     "is_primary": true,
                     "sponsor_id": null,
                     "organization_id": "dba3511f-32ef-486f-ade2-7540ae28922e",
@@ -74,17 +74,17 @@ SchoolBlocksApp.Api = function (baseUrl) {
                 {
                     "id": 1,
                     "type": "url",
-                    "value": "http://www.rossmontessori.org"
+                    "value": "http://www.guhsd.net/"
                 },
                 {
                     "id": 2,
                     "type": "facebook.url",
-                    "value": "https://www.facebook.com/#!/pages/Ross-Montessori-Charter-School/123178844400497"
+                    "value": "https://www.facebook.com/pages/Grossmont-High-School/103777576327800"
                 },
                 {
                     "id": 3,
                     "type": "twitter.url",
-                    "value": "https://twitter.com/RossMontessori"
+                    "value": "https://twitter.com/guhsdtweet"
                 }
             ],
             "blocks": [
@@ -93,9 +93,9 @@ SchoolBlocksApp.Api = function (baseUrl) {
                     "type": "message",
                     "items": [
                         {
-                            "title": "About Ross Montessori",
-                            "message": "The mission of Ross Montessori School is to prepare compassionate life-long learners to have a positive impact on the world.We envision a time when Ross Montessori School will be an exemplary educational institution and recognized as such all over the world. Educators from all backgrounds will observe and learn from our model, grounded in the Montessori Method. Parents will choose our school over any other with a steadfast belief in the value we create for the children, families and communities we serve.",
-                            "url": "http://www.rossmontessori.org",
+                            "title": "About Grossmont Union",
+                            "message": "The Grossmont Union High School District provides education to students in grades 9-12 and is located in the eastern portion of San Diego County. The District was established in 1920 and encompasses an area of approximately 465 square miles, including all of the cities of El Cajon, Santee and Lemon Grove, most of the city of La Mesa, a small portion of the city of San Diego, and the unincorporated areas of Alpine, Dulzura, Jamul, Lakeside, and Spring Valley.",
+                            "url": "http://www.guhsd.net/",
                             "image": null,
                             "displayTextUnderImage": null
                         }
@@ -115,52 +115,52 @@ SchoolBlocksApp.Api = function (baseUrl) {
                     "url": "http://www.rossmontessori.org/calendar/f3eb4194-d7df-4f3a-8e8d-5b32e77022ea",
                     "items": [
                         {
-                            "title": "Beginning of the Year Party",
-                            "description": "Come join us at the <em>Beginning of the Year Party!</em>",
+                            "title": "El Capitan Global Language and Leadership Program Receives Excellence in Innovation Award",
+                            "description": "The East County Schools Federal Credit Union established an Excellence in Innovation and Collaboration Award to recognize school site efforts that have resulted in innovative collaboration that benefits the students of the district. The award recognizes those who have developed and implemented a program that highlights an innovative example of collaboration among multiple groups with evidenced success.",
                             "url": null,
                             "attachments": false,
-                            "location": "RMS, 109 Lewies Lane, Carbondale, CO 81623",
+                            "location": "",
                             "allDay": false,
                             "multiDay": false,
                             "timezone": "America/Denver",
-                            "start": "2016-10-21 09:30:00",
-                            "end": "2016-10-21 10:30:00"
+                            "start": "2016-11-18 09:30:00",
+                            "end": "2016-11-18 10:30:00"
                         },
                         {
-                            "title": "Thanksgiving",
-                            "description": null,
+                            "title": "Mount Miguel Girls Attend Business Conference for Women",
+                            "description": "On Thursday November 3, 2016, a group of 15 girls from Mount Miguel High School's Business Academy attended the Connecting Women to Power Business Conference. They were accompanied by their Principal Dr. Kimberlee Hedrick. At the conference students heard from keynote speaker and NASA Astronaut Heidemarie Stefanyshyn-Piper, who spoke about her perseverance in achieving her dream of becoming an astronaut.",
                             "url": null,
                             "attachments": false,
                             "location": "RMS, 109 Lewies Lane, Carbondale, CO 81623",
                             "allDay": true,
                             "multiDay": false,
                             "timezone": "America/Denver",
-                            "start": "2016-11-24 00:00:00",
-                            "end": "2016-11-24 00:00:00"
+                            "start": "2016-11-03 00:00:00",
+                            "end": "2016-11-03 00:00:00"
                         },
                         {
-                            "title": "Winter Break",
-                            "description": "We have a couple of weeks off.  Yippee!",
+                            "title": "Santana Students Participate in Architectural Heritage Tour",
+                            "description": "Digital Fabrication students from Santana High School went on a field trip to Balboa Park on Friday, November 4, to see how the Spanish Revival architectural style of buildings has influenced famous buildings throughout America. The students are creating their own digitally fabricated buildings using some of the architectural features seen in Balboa Park.",
                             "url": "https://www.nps.gov/index.htm",
                             "attachments": false,
-                            "location": "RMS, 109 Lewies Lane, Carbondale, CO 81623",
+                            "location": "Balboa Park",
                             "allDay": true,
                             "multiDay": true,
                             "timezone": "America/Denver",
-                            "start": "2016-12-20 00:00:00",
-                            "end": "2017-01-04 00:00:00"
+                            "start": "2016-11-04 00:00:00",
+                            "end": "2016-11-04 00:00:00"
                         },
                         {
-                            "title": "Christmas",
-                            "description": null,
+                            "title": "Mount Miguel Medical Academy Seniors Visit Avondale Elementary",
+                            "description":"On Wednesday, November 9, Superintendent Glover, Principal Hedrick and district health pathways coordinator, Heather Peterson visited Mount Miguel High School Science teacher and Medical Academy Coordinator Bridget DeSonia's classroom. ",
                             "url": null,
                             "attachments": false,
                             "location": null,
                             "allDay": true,
                             "multiDay": false,
                             "timezone": "America/Denver",
-                            "start": "2016-12-25 00:00:00",
-                            "end": "2016-12-25 00:00:00"
+                            "start": "2016-11-09 00:00:00",
+                            "end": "2016-11-09 00:00:00"
                         }
                     ]
                 },
@@ -199,39 +199,30 @@ SchoolBlocksApp.Api = function (baseUrl) {
                     "type": "quicklink",
                     "items": [
                         {
-                            "title": "Pancakes",
-                            "url": "http://www.google.com",
-                            "image": "https://parakeetweb.s3.amazonaws.com/images/stickers/Stickers/Pancakes.png"
+                            "title": "FutureForward",
+                            "url": "http://futureforward.guhsd.net/",
+                            "image": "http://www.guhsd.net/_/rsrc/1478538847232/home/LCAP-Button17.png"
                         },
                         {
-                            "title": "Waffles",
-                            "url": "http://www.bing.com",
-                            "image": "https://parakeetweb.s3.amazonaws.com/images/stickers/Stickers/Waffles.png"
+                            "title":"Transport Information",
+                            "url":"http://www.guhsd.net/departments/business-services/transportation",
+                            "image":"http://www.guhsd.net/_/rsrc/1478538847231/home/Bus%20for%20Website.jpg"
                         },
                         {
-                            "title": "BLT Sandwich",
-                            "url": "http://www.duckduckgo.com",
-                            "image": "https://parakeetweb.s3.amazonaws.com/images/stickers/Stickers/BLT%20Sandwich.png"
+                            "title":"Common Core",
+                            "url":"http://www.guhsd.net/departments/educational-services/curriculum/common-core",
+                            "image":"http://www.guhsd.net/_/rsrc/1478538847231/home/CommonCore-Button.png"
                         },
                         {
-                            "title": "Pancakes",
-                            "url": "http://www.google.com",
-                            "image": "https://parakeetweb.s3.amazonaws.com/images/stickers/Stickers/Pancakes.png"
+                            "title":"Event Calendar",
+                            "url":"http://www.guhsd.net/home/calendars/monthly-calendar",
+                            "image":"http://www.guhsd.net/_/rsrc/1478538847538/home/event_calendar.png"
                         },
                         {
-                            "title": "Waffles",
-                            "url": "http://www.bing.com",
-                            "image": "https://parakeetweb.s3.amazonaws.com/images/stickers/Stickers/Waffles.png"
-                        },
-                        {
-                            "title": "Pancakes",
-                            "url": "http://www.google.com",
-                            "image": "https://parakeetweb.s3.amazonaws.com/images/stickers/Stickers/Pancakes.png"
-                        },
-                        {
-                            "title": "Waffles",
-                            "url": "http://www.bing.com",
-                            "image": "https://parakeetweb.s3.amazonaws.com/images/stickers/Stickers/Waffles.png"
+                            "title":"Campus Portal",
+                            "url":"https://grossmontca.infinitecampus.org/campus/portal/grossmont.jsp",
+                            "image":"http://www.guhsd.net/_/rsrc/1478538847539/home/grossmont-portal.png"
+
                         }
                     ]
                 },
