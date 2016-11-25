@@ -116,9 +116,7 @@
                 	prev: '<a class="qlink-nav left"><i class="fa fa-chevron-left"></i></a>',
                   }
         });
-        $('.cover').parallax({imageSrc: 'assets/cover.jpeg'});
         $('.quicklinks').parallax({imageSrc: 'assets/quick-link.png'});
-        console.log("Hello");
      }, ["SchoolBlocksApp.bundles.app", "SchoolBlocksApp.bundles.pageBuilder"]);
    </script>
    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -129,32 +127,22 @@
    <![endif]-->
   </head>
 <body>
-   <section class="cover parallax-window" data-parallax="scroll" data-image-src="assets/cover.jpeg">
-      <nav class="navbar navbar-default">
+   <section class="video_cover">
+      <nav class="navbar navbar-default" style="border:none;box-shadow:none;background:transparent">
          <div class="nav-wrapper">
             <a class="navbar-logo" href="#"><img class="navbar-logo" alt="Brand" src="assets/Logo_blue.png"></a>
-            <div class="connect-with-us">
-               <p  class="connect-with-us-text" tyle="color:#0d5186;font-weight:bold;font-style:italic">Connect with us:</p>
+            <div class="connect-with-us-white">
+               <p  class="connect-with-us-text " tyle="font-weight:bold;font-style:italic;color:#ffffff">Connect with us:</p>
                <ul class="social-links">
-                  <li><a class="twitter-link social-icon" style="color:#43bfff" href="#"><i class="fa fa-twitter "></i></a></li>
-                  <li><a class="facebook-link social-icon" style="color:#094d80" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a id="linkedin" class="social-icon" style="color:#1f86d5" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a id="instagram" class="social-icon" style="color:#4176b3" href="#"><i class="fa fa-instagram"></i></a></li>
+                  <li><a class="twitter-link social-icon" style="color:#fff" href="#"><i class="fa fa-twitter "></i></a></li>
+                  <li><a class="facebook-link social-icon" style="color:#fff" href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a id="linkedin" class="social-icon" style="color:#fff" href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a id="instagram" class="social-icon" style="color:#fff" href="#"><i class="fa fa-instagram"></i></a></li>
                </ul>
             </div>
          </div>
       </nav>
-      <div class="cover-content">
-         <img class="desktop-only progress-background" src="assets/progress_back.png" />
-         <div class="progress-container">
-           <div class="progress">
-              <div class="circular-progress">
-                 <p>95%</p>
-              </div>
-              <p class="progress-msg">Website Completeness</p>
-              <a class="btn-large" href="#">Help Us Complete This Website</a>
-           </div>
-         </div>
+      <div class="vcover-content" style="height:80vh">
          <div class="text">
            <img class="ph" style="max-width:70%;float:right;display:none" src="assets/PH/cover-title.png"/>
            <p class="cover-title"></p>
@@ -165,7 +153,16 @@
          <p>Recieve Email, Text & Alerts</p>
          <a class="btn-large free-btn" href="#"><span><img src="assets/free_subscribe.png"</span></span>subscribe</a>
       </div>
-   </section>
+      <div class="video-container">
+        <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+  <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm>
+<source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg>
+<source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+<source src=http://techslides.com/demos/sample-videos/small.3gp type=video/3gp>
+        </video>
+      </div>
+         </section>
    <section class="about-school">
       <div class="sub-container">
          <h2 id="abt-title" class="section-title"><span class="text">About </span>Your School</h2>
@@ -283,32 +280,7 @@
      </div>
    </section>
    <script>
-   var vid = document.getElementById("bgvid");
-var pauseButton = document.querySelector("#polina button");
 
-function vidFade() {
-  vid.classList.add("stopfade");
-}
-
-vid.addEventListener('ended', function()
-{
-// only functional if "loop" is removed
-vid.pause();
-// to capture IE10
-vidFade();
-});
-
-
-pauseButton.addEventListener("click", function() {
-  vid.classList.toggle("stopfade");
-  if (vid.paused) {
-    vid.play();
-    pauseButton.innerHTML = "Pause";
-  } else {
-    vid.pause();
-    pauseButton.innerHTML = "Paused";
-  }
-})
    </script>
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqzYNWs8xYUi9GbqcnvoLw3NGnmninvI0"></script>
 </body>

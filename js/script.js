@@ -12,7 +12,7 @@ function PageBuilder(organizationData) {
 
     if(browserWidth > 1024){
         no_of_posts = 3;
-        $("a.navbar-logo img").attr('src','assets/Logo.png');
+        //$("a.navbar-logo img").attr('src','assets/Logo.png');
     } else if(browserWidth <= 700){
         no_of_posts = 1;
     }
@@ -29,7 +29,6 @@ function PageBuilder(organizationData) {
 
             case "eventlist":
                 pb.handleEventListBlock(block, no_of_posts);
-
                 break;
 
             case "newsstream":
@@ -112,7 +111,7 @@ PageBuilder.prototype.getEventHTML = function (object, index) {
    code += "<div class=\"body\">";
 
       if(object[index].title!=null){
-         code += "<h3 class=\"event-title event\">"+object[index].title+"</h3>";
+         code += "<h3 class=\"event-title event\">"+object[index].title.substring(0,50)+"..."+"</h3>";
       }
       else{
          code += "<h3 class=\"event-title event\">Event "+(index+1)+"</h3>";
@@ -131,7 +130,7 @@ PageBuilder.prototype.getEventHTML = function (object, index) {
       }
       code += "</p>";
       if(object[index].description!=null){
-         code += "<p class=\"description\">"+object[index].description.substring(0,200)+"..."+"</p>";
+         code += "<p class=\"description\">"+object[index].description.substring(0,100)+"..."+"</p>";
       }
       else{
          code += "<p class=\"description\">Event Description Not Avilable</p>";
@@ -312,7 +311,7 @@ PageBuilder.prototype.handleQuicklinkBlock = function (block,pod) {
     var links = block.items;
     var index = 0,code ="",j=1;
     var posts = links.length;
-    //$("section.quicklinks").css('background-image','url(./assets/quick-link.png)')
+    $("section.quicklinks").css('background-image','url(./assets/quick-link.png)')
     $("section.quicklinks div.contents").css('background-color','rgba(0,4,24,0.8)')
     $("div.qlinks ul li").remove();
     if($(document).width()<=700)pod=1;
@@ -370,6 +369,7 @@ PageBuilder.prototype.handleStaffBlock = function (block,pod) {
     var subject = block.items;
     var index = 0,code="",code1="",j=1;
     var temp = "active"
+    console.log(pod);
     var posts = subject.length;
     while(index<posts){
       //code += "<li><a data-toggle=\"tab\" href=\"#"+subject[index].title+"\">"+subject[index].title+"</a></li>";
