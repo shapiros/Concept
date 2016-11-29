@@ -231,7 +231,7 @@ PageBuilder.prototype.getNewsHTML = function (object, index) {
       code += "</p>";
       }
       if(object[index].description!=null){
-         code += "<p class=\"description\">"+object[index].description.substring(0,200)+"..."+"</p>";
+         code += "<p class=\"description\">"+object[index].description.substring(0,100)+"..."+"</p>";
       }
       else{
          code += "<p class=\"description\">Event Description Not Avilable</p>";
@@ -311,7 +311,7 @@ PageBuilder.prototype.handleQuicklinkBlock = function (block,pod) {
     var links = block.items;
     var index = 0,code ="",j=1;
     var posts = links.length;
-    $("section.quicklinks").css('background-image','url(./assets/quick-link.png)')
+    //$("section.quicklinks").css('background-image','url(./assets/quick-link.png)')
     $("section.quicklinks div.contents").css('background-color','rgba(0,4,24,0.8)')
     $("div.qlinks ul li").remove();
     if($(document).width()<=700)pod=1;
