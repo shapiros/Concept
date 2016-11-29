@@ -382,4 +382,5 @@ PageBuilder.prototype.handleStaffBlock = function (block,pod) {
     $("section.staff-directory div.tab-content").append(code1);
     $("ul.nav.nav-tabs li:first").addClass("active");
     $("div.tab-content div:first").addClass("active");
+    
 };
