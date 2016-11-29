@@ -43,7 +43,7 @@ SchoolBlocksApp.Api = function (baseUrl) {
             "id": "dba3511f-32ef-486f-ade2-7540ae28922e",
             "parent_id": "root",
             "user_id": "root",
-            "title": "Grossmont Union High School",
+            "title": "Grossmont Union H. S. District",
             "created": "2015-02-11 06:44:28.098659+00",
             "modified": "2016-08-15 22:52:10.147496+00",
             "type": "school",
@@ -106,7 +106,7 @@ SchoolBlocksApp.Api = function (baseUrl) {
                     "type": "video",
                     "title": "SchoolBlocks Intro",
                     "url": "https://youtu.be/xdl0UWk-1FQ",
-                    "embedUrl": "https://www.youtube.com/embed/xdl0UWk-1FQ?modestbranding=1&amp;showinfo=0&amp;rel=0"
+                    "embedUrl": "https://www.youtube.com/embed/Nu7v5rXHHXc?list=PLeeBzX1ByAOSJqc-ZxvEnd8t58ZAuy5NR?modestbranding=1&amp;showinfo=0&amp;rel=0"
                 },
                 {
                     "id": 3,
@@ -169,26 +169,26 @@ SchoolBlocksApp.Api = function (baseUrl) {
                     "type": "newsstream",
                     "items": [
                         {
-                            "title": "Ross Kids are the Smartest!",
-                            "description": "This great website shows how Ross kids are the smartest.",
+                            "title": "28th Annual Thanksgiving Feast at Chaparral",
+                            "description": "Chaparral High School held its 28th Annual Thanksgiving Feast on Friday, November 18, at 11:15 a.m. as students and staff were treated to a traditional Thanksgiving dinner.",
                             "url": "http://www.rossmontessori.org",
-                            "image": "https://scontent.fsnc1-1.fna.fbcdn.net/t31.0-8/14310317_1281527738565596_6564701507888292348_o.jpg",
+                            "image": "https://3.bp.blogspot.com/-qJYGNi8QH_s/WC9uTSPOujI/AAAAAAAACSU/f15dc0SwT-syYOkA1k9z2Jq5qslZZhaxACLcB/s320/Feast.jpg",
                             "timezone": "America/Denver",
                             "timestamp": "2016-09-11 09:30:32"
                         },
                         {
-                            "title": "The Middle School is off for their camping trip. Have a great time everyone!",
-                            "description": null,
+                            "title": "27th Annual JRTOC Veterans Day Ceremony at Mount Miguel",
+                            "description": "Veterans were remembered with honor on the morning of Monday, November 7, as the JROTC Program at Mount Miguel High School held its 27th Annual Veterans Day Ceremony. Principal Kim Hedrick and Superintendent Glover were joined by parents and staff who witnessed the ceremony as more than 100 JROTC Cadets honored military personnel who have served our country throughout its history.",
                             "url": "https://www.facebook.com/rossmontessori/photos/a.204351582949889.65495.123178844400497/1285843474800689/?type=3&theater",
-                            "image": "https://scontent.fsnc1-1.fna.fbcdn.net/t31.0-8/14324283_1285843474800689_6177427745886358701_o.jpg",
+                            "image": "https://2.bp.blogspot.com/-DyDrhzzf5KA/WCS7E_Q3mPI/AAAAAAAACPs/6iZV3YcoeVcQDTVaO-yFXpeBV63_RfDXACLcB/s400/Vets.16.jpg",
                             "timezone": "America/Denver",
                             "timestamp": "2016-09-04 09:30:32"
                         },
                         {
-                            "title": "Montessori Education & My Child",
-                            "description": null,
+                            "title": "Monte Vista High School Awarded Jimmie Johnson Foundation Grant",
+                            "description": "NASCAR Sprint Cup Series Champion Jimmie Johnson and his wife Chandra, announced on Wednesday, that Monte Vista High School was selected as a recipient of a $70,554 education grant.",
                             "url": "http://amshq.org/Family-Resources/Montessori-Education-and-Your-Child",
-                            "image": null,
+                            "image": "https://3.bp.blogspot.com/-JTVm7m-IlZk/WCS50JMIzqI/AAAAAAAACPc/slM15oLYXdskIFB_E1erD1B0WdugflU1ACLcB/s400/Champions-Grant-Logo-FINAL.jpg",
                             "timezone": "America/Denver",
                             "timestamp": "2016-09-01 14:10:00"
                         }
